@@ -81,17 +81,7 @@ body {
 .navbar-inner {
   display: flex;
   justify-content: space-between;
-  padding: 10px 60px;
-
-  @media screen and (max-width: 620px) {
-    padding-right: 30px;
-    padding-left: 30px;
-  }
-
-  @media screen and (max-width: 420px) {
-    padding-right: 10px;
-    padding-left: 10px;
-  }
+  padding: 10px 0;
 }
 
 .navbar-links {
@@ -182,6 +172,6 @@ body {
 
 .page-wrapper {
   flex-grow: 1;
-  padding: 20px;
+  padding: 20px 0;
   color: var(--primary-color);
 }
