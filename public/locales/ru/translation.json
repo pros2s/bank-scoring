@@ -1,0 +1,22 @@
+{
+  "Language": "English",
+  "notFoundPage": "Страница не найдена",
+  "pageError": "Что-то пошло не так на этой странице",
+  "chooseCurrency": "Выберите валюту",
+  "symbolsError": "Ошибка закгрузки списка валют",
+  "convert": "Конвертировать",
+  "fromCurrency": "С валюты",
+  "toCurrency": "В валюту",
+  "amount": "Сумма",
+  "recentRates": "Смотреть свежий курс валют",
+  "searchCur": "Найти валюту",
+  "search": "Поиск",
+  "choseBaseCurrency": "Выбрать базовую валюту",
+  "goConverter": "Назад к конвертеру",
+  "rateOfChangePerDay": "Коэфф. изменения за день",
+  "currencyError": "Валюта не найдена",
+  "smallLanguage": "Eng",
+  "goConverterSmall": "К конвертеру",
+  "registration": "Регистрация",
+  "autorization": "Авторизация"
+}

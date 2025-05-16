@@ -1,0 +1,64 @@
+{
+  "creditors": [
+    {
+      "id": 10001,
+      "name": "John Doe",
+      "age": 34,
+      "income": 75000,
+      "maritalStatus": "married",
+      "existingDebt": 20000,
+      "hasCreditHistory": true,
+      "creditScore": 695,
+      "status": "Approved",
+      "applicationDate": "2025-04-10"
+    },
+    {
+      "id": 10002,
+      "name": "Jane Smith",
+      "age": 29,
+      "income": 54000,
+      "maritalStatus": "single",
+      "existingDebt": 15000,
+      "hasCreditHistory": false,
+      "creditScore": 610,
+      "status": "Pending",
+      "applicationDate": "2025-04-12"
+    },
+    {
+      "id": 10003,
+      "name": "Alex Johnson",
+      "age": 45,
+      "income": 98000,
+      "maritalStatus": "married",
+      "existingDebt": 40000,
+      "hasCreditHistory": true,
+      "creditScore": 680,
+      "status": "Denied",
+      "applicationDate": "2025-04-08"
+    },
+    {
+      "id": 10004,
+      "name": "Emily Brower",
+      "age": 51,
+      "income": 112000,
+      "maritalStatus": "divorced",
+      "existingDebt": 10000,
+      "hasCreditHistory": true,
+      "creditScore": 730,
+      "status": "Approved",
+      "applicationDate": "2025-04-09"
+    },
+    {
+      "id": 10005,
+      "name": "Michael Chan",
+      "age": 38,
+      "income": 62000,
+      "maritalStatus": "single",
+      "existingDebt": 12000,
+      "hasCreditHistory": true,
+      "creditScore": 655,
+      "status": "Approved",
+      "applicationDate": "2025-04-13"
+    }
+  ]
+}

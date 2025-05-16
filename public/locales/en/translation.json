@@ -1,0 +1,22 @@
+{
+  "Language": "Русский",
+  "notFoundPage": "Page not found",
+  "pageError": "Something went wrong on this page",
+  "chooseCurrency": "Chose currency",
+  "symbolsError": "Error with fetch currency list",
+  "convert": "Convert",
+  "fromCurrency": "From",
+  "toCurrency": "To",
+  "amount": "Amount",
+  "recentRates": "Watch recent rates",
+  "searchCur": "Search currency",
+  "search": "Search",
+  "choseBaseCurrency": "Chose base currency",
+  "goConverter": "Back to converter",
+  "rateOfChangePerDay": "Rate of change per day",
+  "currencyError": "Currency not found",
+  "smallLanguage": "Рус",
+  "goConverterSmall": "To converter",
+  "registration": "Registration",
+  "autorization": "Autorization"
+}

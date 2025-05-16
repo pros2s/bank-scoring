@@ -1,0 +1,21 @@
+.app_dark_theme {
+  --bg-color: rgb(34 34 34);
+  --inner-bg-color: #292929;
+  --elem-bg-color: rgb(45 45 45);
+  --primary-color: rgb(237 237 237);
+  --secondary-color: rgb(179 179 179);
+  --error-title: rgb(255 52 52);
+  --error-text: rgb(216 37 37);
+  --active-color: rgb(83 82 82);
+  --rate-hover-bg-color: #f9f9f9;
+  --rate-hover-color: #323232;
+  --positive-number-color: rgb(32 188 164);
+  --negative-number-color: rgb(230 75 96);
+  --switcher-color: rgb(255 234 0);
+  --switcher-bg-color: rgb(242 187 45);
+  --switcher-bg-gradient: radial-gradient(
+    circle,
+    rgb(242 187 45 / 100%) 0%,
+    rgb(44 44 44 / 80%) 76%
+  );
+}
