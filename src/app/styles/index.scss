@@ -94,6 +94,12 @@ body {
   }
 }
 
+.navbar-links {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
 .content {
   min-height: 200px;
   margin: 0 auto;

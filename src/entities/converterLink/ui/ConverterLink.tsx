@@ -17,7 +17,7 @@ export const ConverterLink = memo(() => {
 
   return (
     <div>
-      {pathname === '/rates' && (
+      {pathname !== RoutesPaths.main && (
         <AppLink className={cls.converterLink} to={RoutesPaths.main} theme={AppLinkTheme.SECONDARY}>
           {isSmall ? t('goConverterSmall') : t('goConverter')}
         </AppLink>
