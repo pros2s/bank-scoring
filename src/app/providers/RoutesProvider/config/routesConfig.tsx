@@ -2,15 +2,15 @@ import { RouteProps } from 'react-router-dom';
 
 import { ConverterPage } from '@/pages/converterPage';
 import { CreditorsPage } from '@/pages/creditorsPage';
-import { MainPage } from '@/pages/mainPage';
 import { NotFoundPage } from '@/pages/notFoundPage';
 import { RatesPage } from '@/pages/ratesPage';
+import { ScoringPage } from '@/pages/scroringPage';
 import { AppRoutes, RoutesPaths } from '@/shared/lib/routes/routes';
 
 export const routesConfig: Record<AppRoutes, RouteProps> = {
-  [AppRoutes.MAIN]: {
-    path: RoutesPaths.main,
-    element: <MainPage />,
+  [AppRoutes.SCORING]: {
+    path: RoutesPaths.scoring,
+    element: <ScoringPage />,
   },
   [AppRoutes.CONVERTER]: {
     path: RoutesPaths.converter,

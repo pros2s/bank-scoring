@@ -3,16 +3,16 @@ import { useLocation } from 'react-router-dom';
 import { RoutesPaths } from '@/shared/lib/routes/routes';
 import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink/AppLink';
 
-export const MainLink = () => {
+export const ScoringLink = () => {
   const { pathname } = useLocation();
 
-  if (pathname === RoutesPaths.main) return null;
+  if (pathname === RoutesPaths.scoring) return null;
 
   return (
-    <AppLink to={RoutesPaths.main} theme={AppLinkTheme.SECONDARY}>
-      main
+    <AppLink to={RoutesPaths.scoring} theme={AppLinkTheme.SECONDARY}>
+      Scoring
     </AppLink>
   );
 };
 
-MainLink.displayName = 'MainLink';
+ScoringLink.displayName = 'ScoringLink';

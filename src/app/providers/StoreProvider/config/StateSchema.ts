@@ -10,6 +10,7 @@ import { NavigateOptions, To } from 'react-router-dom';
 
 import { SearchCurrencySchema } from '@/entities/searchCurrency';
 import { ChoseCurrencySchema, SymbolsSchema } from '@/features/choseCurrency';
+import { ScoringSchema } from '@/pages/scroringPage';
 import { CurrencyConverterSchema } from '@/widgets/CurrencyConverter';
 import { ResentRatesSchema } from '@/widgets/RecentRates';
 
@@ -27,6 +28,8 @@ export interface StateSchema {
   choseFromCurrency?: ChoseCurrencySchema;
   choseBaseCurrency?: ChoseCurrencySchema;
   choseToCurrency?: ChoseCurrencySchema;
+
+  scoring?: ScoringSchema;
 }
 
 export type StateSchemaFields = keyof StateSchema;

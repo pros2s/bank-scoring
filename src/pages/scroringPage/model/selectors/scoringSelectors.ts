@@ -1,0 +1,14 @@
+import { StateSchema } from '@/app/providers/StoreProvider';
+
+export const getScoringAge = (state: StateSchema) => state.scoring?.age;
+export const getScoringIncome = (state: StateSchema) => state.scoring?.income;
+export const getScoringMaritalStatus = (state: StateSchema) => state.scoring?.maritalStatus;
+export const getScoringExistingDebt = (state: StateSchema) => state.scoring?.existingDebt;
+export const getScoringHasCreditHistory = (state: StateSchema) => state.scoring?.hasCreditHistory;
+export const getScoringEducation = (state: StateSchema) => state.scoring?.education;
+export const getScoringHasCriminalRecord = (state: StateSchema) => state.scoring?.hasCriminalRecord;
+export const getScoringEmploymentYears = (state: StateSchema) => state.scoring?.employmentYears;
+export const getScoringSavings = (state: StateSchema) => state.scoring?.savings;
+export const getScoringAssets = (state: StateSchema) => state.scoring?.assets;
+export const getScoringChildrenCount = (state: StateSchema) => state.scoring?.childrenCount;
+export const getScoringScore = (state: StateSchema) => state.scoring?.score;

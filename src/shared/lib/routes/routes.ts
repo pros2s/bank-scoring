@@ -1,5 +1,5 @@
 export enum AppRoutes {
-  MAIN = 'main',
+  SCORING = 'scoring',
   CONVERTER = 'converter',
   RATES = 'rates',
   CREDITORS = 'creditors',
@@ -7,7 +7,7 @@ export enum AppRoutes {
 }
 
 export const RoutesPaths: Record<AppRoutes, string> = {
-  [AppRoutes.MAIN]: '/',
+  [AppRoutes.SCORING]: '/',
   [AppRoutes.CONVERTER]: '/converter',
   [AppRoutes.RATES]: '/rates',
   [AppRoutes.CREDITORS]: '/creditors',
