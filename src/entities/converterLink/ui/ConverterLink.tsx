@@ -17,8 +17,12 @@ export const ConverterLink = memo(() => {
 
   return (
     <div>
-      {pathname !== RoutesPaths.main && (
-        <AppLink className={cls.converterLink} to={RoutesPaths.main} theme={AppLinkTheme.SECONDARY}>
+      {pathname !== RoutesPaths.converter && (
+        <AppLink
+          className={cls.converterLink}
+          to={RoutesPaths.converter}
+          theme={AppLinkTheme.SECONDARY}
+        >
           {isSmall ? t('goConverterSmall') : t('goConverter')}
         </AppLink>
       )}

@@ -1,5 +1,6 @@
 import { RouteProps } from 'react-router-dom';
 
+import { ConverterPage } from '@/pages/converterPage';
 import { CreditorsPage } from '@/pages/creditorsPage';
 import { MainPage } from '@/pages/mainPage';
 import { NotFoundPage } from '@/pages/notFoundPage';
@@ -10,6 +11,10 @@ export const routesConfig: Record<AppRoutes, RouteProps> = {
   [AppRoutes.MAIN]: {
     path: RoutesPaths.main,
     element: <MainPage />,
+  },
+  [AppRoutes.CONVERTER]: {
+    path: RoutesPaths.converter,
+    element: <ConverterPage />,
   },
   [AppRoutes.RATES]: {
     path: RoutesPaths.rates,
