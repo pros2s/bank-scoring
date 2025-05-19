@@ -45,5 +45,8 @@
   "yourScoringAssets": "Your scoring assets",
   "children": "Children",
   "yourChildren": "Your children",
-  "childrenError": "Incorrect children years"
+  "childrenError": "Incorrect children years",
+  "married": "Married",
+  "divorced": "Divorced",
+  "single": "Single"
 }

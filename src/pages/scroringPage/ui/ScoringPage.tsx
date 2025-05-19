@@ -12,6 +12,7 @@ import { ScoringReducer } from '../model/slice/ScoringSlice';
 
 import { ScoringAge } from './ScoringAge/ScoringAge';
 import { ScoringIncome } from './ScoringIncome/ScoringIncome';
+import { ScoringMaritalStatus } from './ScoringMaritalStatus/ScoringMaritalStatus';
 
 const reducers: ReducersList = {
   scoring: ScoringReducer,
@@ -26,7 +27,9 @@ const ScoringPage = memo(() => {
         <FlexBox align='center' gap={20}>
           <ScoringAge />
           <ScoringIncome />
+          <ScoringMaritalStatus />
         </FlexBox>
+
 
         <Label info={errorMessage} isError={!!errorMessage} />
       </section>

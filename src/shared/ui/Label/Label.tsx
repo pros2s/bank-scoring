@@ -15,7 +15,7 @@ interface LabelProps {
 
 export const Label = memo(({ label, info, isError, isSuccess }: LabelProps) => (
   <FlexBox align='center' gap={10}>
-    {!!label && <p className={cls.label}>{label}</p>}
+    {!!label && <p className={`${cls.label} ellipsis`}>{label}</p>}
 
     {!!info && (
       <p className={classNames(cls.info, [], { [cls.error]: isError, [cls.success]: isSuccess })}>

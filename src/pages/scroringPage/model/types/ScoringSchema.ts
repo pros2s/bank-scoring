@@ -1,5 +1,5 @@
-export type MaritalStatus = 'single' | 'married' | 'divorced';
-export type EducationLevel = 'none' | 'secondary' | 'higher' | 'bachelor' | 'master' | 'phd';
+export type MaritalStatusType = 'single' | 'married' | 'divorced';
+export type EducationLevelType = 'none' | 'secondary' | 'higher' | 'bachelor' | 'master' | 'phd';
 export type AssetType = 'house' | 'apartment' | 'car';
 
 export interface ScoringSchema {
@@ -9,14 +9,14 @@ export interface ScoringSchema {
   income: string;
   incomeError?: string;
 
-  maritalStatus: MaritalStatus;
+  maritalStatus: MaritalStatusType;
 
   existingDebt: number;
   existingDebtError?: string;
 
   hasCreditHistory: boolean;
 
-  education: EducationLevel;
+  education: EducationLevelType;
 
   hasCriminalRecord: boolean;
 

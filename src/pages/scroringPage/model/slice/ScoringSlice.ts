@@ -1,6 +1,11 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-import { AssetType, EducationLevel, MaritalStatus, ScoringSchema } from '../types/ScoringSchema';
+import {
+  AssetType,
+  EducationLevelType,
+  MaritalStatusType,
+  ScoringSchema,
+} from '../types/ScoringSchema';
 
 const initialState: ScoringSchema = {
   age: '',
@@ -45,7 +50,7 @@ export const ScoringSlice = createSlice({
       state.incomeError = action.payload;
     },
     // --------------------------------------------------------------
-    setMaritalStatus: (state, action: PayloadAction<MaritalStatus>) => {
+    setMaritalStatus: (state, action: PayloadAction<MaritalStatusType>) => {
       state.maritalStatus = action.payload;
     },
 
@@ -61,7 +66,7 @@ export const ScoringSlice = createSlice({
     setHasCreditHistory: (state, action: PayloadAction<boolean>) => {
       state.hasCreditHistory = action.payload;
     },
-    setEducation: (state, action: PayloadAction<EducationLevel>) => {
+    setEducation: (state, action: PayloadAction<EducationLevelType>) => {
       state.education = action.payload;
     },
 
