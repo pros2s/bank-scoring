@@ -1,5 +1,6 @@
 import { memo } from 'react';
 
+import { classNames } from '@/shared/lib/classNames/classNames';
 import {
   DynamicReducerLoader,
   ReducersList,
@@ -13,6 +14,7 @@ import { ScoringReducer } from '../model/slice/ScoringSlice';
 import { ScoringAge } from './ScoringAge/ScoringAge';
 import { ScoringIncome } from './ScoringIncome/ScoringIncome';
 import { ScoringMaritalStatus } from './ScoringMaritalStatus/ScoringMaritalStatus';
+import cls from './ScoringPage.module.scss';
 
 const reducers: ReducersList = {
   scoring: ScoringReducer,
@@ -23,13 +25,12 @@ const ScoringPage = memo(() => {
 
   return (
     <DynamicReducerLoader removeAfterUnmount reducers={reducers}>
-      <section className='content'>
-        <FlexBox align='center' gap={20}>
+      <section className={classNames(cls.content, ['content'])}>
+        <FlexBox align='center' gap={50}>
           <ScoringAge />
           <ScoringIncome />
           <ScoringMaritalStatus />
         </FlexBox>
-
 
         <Label info={errorMessage} isError={!!errorMessage} />
       </section>
