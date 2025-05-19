@@ -37,7 +37,7 @@ export const ScoringMaritalStatus = () => {
 
   return (
     <FlexBox className={cls.container} direction='column' gap={5}>
-      <Label label={`${t('yourMaritalStatus')}`} />
+      <Label label={`${t('maritalStatus')}`} />
 
       <Button className={cls.trigger} onClick={handleShow} theme={ButtonThemes.CLEAR} tabIndex={0}>
         {t(maritalStatus)}

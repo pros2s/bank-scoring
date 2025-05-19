@@ -11,7 +11,7 @@ export interface ScoringSchema {
 
   maritalStatus: MaritalStatusType;
 
-  existingDebt: number;
+  existingDebt: string;
   existingDebtError?: string;
 
   hasCreditHistory: boolean;
@@ -20,16 +20,16 @@ export interface ScoringSchema {
 
   hasCriminalRecord: boolean;
 
-  employmentYears: number;
+  employmentYears: string;
   employmentYearsError?: string;
 
-  savings: number;
+  savings: string;
   savingsError?: string;
 
   assets: AssetType[];
 
-  childrenCount: number;
+  childrenCount: string;
   childrenCountError?: string;
 
-  score?: number;
+  score?: string;
 }

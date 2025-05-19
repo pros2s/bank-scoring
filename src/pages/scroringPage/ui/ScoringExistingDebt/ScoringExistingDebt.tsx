@@ -6,41 +6,41 @@ import { FlexBox } from '@/shared/ui/FlexBox';
 import { Input } from '@/shared/ui/Input/Input';
 import { Label } from '@/shared/ui/Label';
 
-import { getScoringIncome } from '../../model/selectors/scoringSelectors';
+import { getScoringExistingDebt } from '../../model/selectors/scoringSelectors';
 import { ScoringActions } from '../../model/slice/ScoringSlice';
 import scCls from '../ScoringPage.module.scss';
 
-const { setIncome, setIncomeError } = ScoringActions;
+const { setExistingDebt, setExistingDebtError } = ScoringActions;
 
-export const ScoringIncome = () => {
+export const ScoringExistingDebt = () => {
   const { t } = useTranslation();
 
   const dispatch = useAppDispatch();
-  const income = useSelector(getScoringIncome);
+  const ExistingDebt = useSelector(getScoringExistingDebt);
 
   const handleChange = (val: string) => {
-    dispatch(setIncome(val));
+    dispatch(setExistingDebt(val));
 
     const numValue = Number(val);
     const isNumber = !Number.isNaN(numValue);
     const isLess = numValue < 0;
 
     if (!isNumber || isLess) {
-      dispatch(setIncomeError('incomeError'));
+      dispatch(setExistingDebtError('existingDebtError'));
       return;
     }
 
-    dispatch(setIncomeError(''));
+    dispatch(setExistingDebtError(''));
   };
 
   return (
     <FlexBox className={scCls.container} direction='column' gap={5}>
-      <Label label={`${t('yourIncome')}, ₽`} />
+      <Label label={`${t('debt')}, ₽`} />
 
       <div className='input'>
         <Input
-          placeholder={t('income')}
-          value={income}
+          placeholder={t('debt')}
+          value={ExistingDebt}
           onChange={handleChange}
           type='number'
           min={0}
@@ -50,4 +50,4 @@ export const ScoringIncome = () => {
   );
 };
 
-ScoringIncome.displayName = 'ScoringIncome';
+ScoringExistingDebt.displayName = 'ScoringExistingDebt';

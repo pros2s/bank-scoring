@@ -11,15 +11,15 @@ const initialState: ScoringSchema = {
   age: '',
   income: '',
   maritalStatus: 'single',
-  existingDebt: 0,
+  existingDebt: '',
   hasCreditHistory: false,
   education: 'none',
   hasCriminalRecord: false,
-  employmentYears: 0,
-  savings: 0,
+  employmentYears: '',
+  savings: '',
   assets: [],
-  childrenCount: 0,
-  score: 0,
+  childrenCount: '',
+  score: '',
 
   ageError: '',
   incomeError: '',
@@ -55,7 +55,7 @@ export const ScoringSlice = createSlice({
     },
 
     // existingDebt
-    setExistingDebt: (state, action: PayloadAction<number>) => {
+    setExistingDebt: (state, action: PayloadAction<string>) => {
       state.existingDebt = action.payload;
     },
     setExistingDebtError: (state, action: PayloadAction<string>) => {
@@ -80,7 +80,7 @@ export const ScoringSlice = createSlice({
     },
 
     // employmentYears
-    setEmploymentYears: (state, action: PayloadAction<number>) => {
+    setEmploymentYears: (state, action: PayloadAction<string>) => {
       state.employmentYears = action.payload;
     },
     setEmploymentYearsError: (state, action: PayloadAction<string>) => {
@@ -89,7 +89,7 @@ export const ScoringSlice = createSlice({
     // --------------------------------------------------------------
 
     // savings
-    setSavings: (state, action: PayloadAction<number>) => {
+    setSavings: (state, action: PayloadAction<string>) => {
       state.savings = action.payload;
     },
     setSavingsError: (state, action: PayloadAction<string>) => {
@@ -102,7 +102,7 @@ export const ScoringSlice = createSlice({
     },
 
     // childrenCount
-    setChildrenCount: (state, action: PayloadAction<number>) => {
+    setChildrenCount: (state, action: PayloadAction<string>) => {
       state.childrenCount = action.payload;
     },
     setChildrenCountError: (state, action: PayloadAction<string>) => {
@@ -110,7 +110,7 @@ export const ScoringSlice = createSlice({
     },
     // --------------------------------------------------------------
 
-    setScore: (state, action: PayloadAction<number>) => {
+    setScore: (state, action: PayloadAction<string>) => {
       state.score = action.payload;
     },
   },
