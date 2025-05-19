@@ -1,0 +1,15 @@
+.label {
+  font: var(--font-m);
+}
+
+.info {
+  display: inline-block;
+
+  &.success {
+    color: var(--color-label-success);
+  }
+
+  &.error {
+    color: #fc573b;
+  }
+}

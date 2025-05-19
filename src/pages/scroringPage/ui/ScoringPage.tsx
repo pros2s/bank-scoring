@@ -1,44 +1,34 @@
 import { memo } from 'react';
 
-import { useSelector } from 'react-redux';
-
 import {
   DynamicReducerLoader,
   ReducersList,
 } from '@/shared/lib/components/DynamicReducerLoader/DynamicReducerLoader';
-import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
-import { Input } from '@/shared/ui/Input/Input';
+import { FlexBox } from '@/shared/ui/FlexBox';
+import { Label } from '@/shared/ui/Label';
 
-import { getScoringAge } from '../model/selectors/scoringSelectors';
-import { ScoringActions, ScoringReducer } from '../model/slice/ScoringSlice';
+import { useGetScoringErrorMessage } from '../hooks/useGetScoringErrorMessage';
+import { ScoringReducer } from '../model/slice/ScoringSlice';
 
-const { setAge } = ScoringActions;
+import { ScoringAge } from './ScoringAge/ScoringAge';
+import { ScoringIncome } from './ScoringIncome/ScoringIncome';
 
 const reducers: ReducersList = {
   scoring: ScoringReducer,
 };
 
 const ScoringPage = memo(() => {
-  const dispatch = useAppDispatch();
-  const age = useSelector(getScoringAge);
-
-  const handleChange = (val: string) => {
-    dispatch(setAge(val));
-  };
+  const errorMessage = useGetScoringErrorMessage();
 
   return (
     <DynamicReducerLoader removeAfterUnmount reducers={reducers}>
       <section className='content'>
-        <div className='input'>
-          <Input
-            placeholder='age'
-            value={age}
-            onChange={handleChange}
-            type='number'
-            min={0}
-            max={100}
-          />
-        </div>
+        <FlexBox align='center' gap={20}>
+          <ScoringAge />
+          <ScoringIncome />
+        </FlexBox>
+
+        <Label info={errorMessage} isError={!!errorMessage} />
       </section>
     </DynamicReducerLoader>
   );

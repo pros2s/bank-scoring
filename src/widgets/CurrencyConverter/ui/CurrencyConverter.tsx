@@ -13,7 +13,9 @@ import {
   fetchRate,
   fetchSymbols,
   getSymbols,
- getFromCurrentCurrency , getToCurrentCurrency } from '@/features/choseCurrency';
+  getFromCurrentCurrency,
+  getToCurrentCurrency,
+} from '@/features/choseCurrency';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import {
   DynamicReducerLoader,
@@ -119,8 +121,8 @@ export const CurrencyConverter = memo(() => {
       <div className={cls.inner}>
         <section className={cls.tools}>
           <div>
-            <h3 className={cls.label}>{t('convert')}</h3>
-            <div className='input'>
+            <h3 className='label'>{t('convert')}</h3>
+            <div className={classNames(cls.convert, ['input'])}>
               <Input
                 placeholder={t('amount')}
                 value={inputValue}
@@ -133,14 +135,14 @@ export const CurrencyConverter = memo(() => {
           </div>
           <div className={cls.currencyLists}>
             <div className={cls.from}>
-              <h3 className={cls.label}>{t('fromCurrency')}</h3>
+              <h3 className='label'>{t('fromCurrency')}</h3>
               <ChoseFromCurrency currencyList={currencyList} />
             </div>
             <Button className={cls.exchange} theme={ButtonThemes.CLEAR} onClick={onExchange}>
               <CgArrowsExchange className={classNames('', [], { [cls.flipped]: isFlipped })} />
             </Button>
             <div className={cls.to}>
-              <h3 className={cls.label}>{t('toCurrency')}</h3>
+              <h3 className='label'>{t('toCurrency')}</h3>
               <ChoseToCurrency currencyList={currencyList} />
             </div>
           </div>

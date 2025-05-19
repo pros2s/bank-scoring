@@ -1,4 +1,5 @@
 export type Mode = Record<string, boolean | string | undefined>;
+export type Classes = Array<string | undefined>;
 
 export const classNames = (
   mainClass: string,

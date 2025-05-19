@@ -4,15 +4,32 @@ export type AssetType = 'house' | 'apartment' | 'car';
 
 export interface ScoringSchema {
   age: string;
-  income: number;
+  ageError?: string;
+
+  income: string;
+  incomeError?: string;
+
   maritalStatus: MaritalStatus;
+
   existingDebt: number;
+  existingDebtError?: string;
+
   hasCreditHistory: boolean;
+
   education: EducationLevel;
+
   hasCriminalRecord: boolean;
+
   employmentYears: number;
+  employmentYearsError?: string;
+
   savings: number;
+  savingsError?: string;
+
   assets: AssetType[];
+
   childrenCount: number;
+  childrenCountError?: string;
+
   score?: number;
 }
