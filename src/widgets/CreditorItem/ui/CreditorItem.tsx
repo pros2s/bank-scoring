@@ -1,9 +1,10 @@
 import { useTranslation } from 'react-i18next';
-import { MdEdit, MdOutlineClose } from 'react-icons/md';
+import { MdDelete } from 'react-icons/md';
 
+import { CreditStatus } from '@/entities/creditSatus';
 import { Gauge } from '@/entities/gauge';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { AssetType, EducationLevelType, MaritalStatusType } from '@/shared/lib/types/scoring';
+import { AssetType, EducationLevelType, MaritalStatusType, ScoreStatusType } from '@/shared/lib/types/scoring';
 import { Button, ButtonThemes } from '@/shared/ui/Button/Button';
 import { FlexBox } from '@/shared/ui/FlexBox';
 
@@ -27,7 +28,7 @@ export interface CreditorType {
   assets: AssetType[];
   childrenCount: string;
   score: number;
-  status: string;
+  status: ScoreStatusType;
 }
 
 interface CreditorItemProps {
@@ -66,15 +67,9 @@ export const CreditorItem = ({ creditor, className }: CreditorItemProps) => {
           <p className={cls.label}>{getDate(applicationDate)}</p>
         </FlexBox>
 
-        <FlexBox align='center' gap={5}>
-          <Button theme={ButtonThemes.CLEAR}>
-            <MdEdit className='size-20' />
-          </Button>
-
-          <Button theme={ButtonThemes.CLEAR}>
-            <MdOutlineClose className='size-20' />
-          </Button>
-        </FlexBox>
+        <Button theme={ButtonThemes.CLEAR}>
+          <MdDelete className='size-20' />
+        </Button>
       </FlexBox>
 
       <FlexBox className='w-100' align='center' justify='between' gap={20}>
@@ -144,7 +139,7 @@ export const CreditorItem = ({ creditor, className }: CreditorItemProps) => {
         <FlexBox className={cls.stats} direction='column' align='center'>
           <Gauge className={cls.gauge} score={score} tickFontSize={10} />
 
-          {status}
+          <CreditStatus status={status} />
         </FlexBox>
       </FlexBox>
     </FlexBox>

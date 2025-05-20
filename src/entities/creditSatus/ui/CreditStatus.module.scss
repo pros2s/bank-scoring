@@ -1,0 +1,19 @@
+.status {
+  padding: 3px 15px;
+  border-radius: 20px;
+
+  &.Denied {
+    color: var(--color-status-denied);
+    background: var(--bg-status-denied);
+  }
+
+  &.Approved {
+    color: var(--color-status-approved);
+    background: var(--bg-status-approved);
+  }
+
+  &.Pending {
+    color: var(--color-status-pending);
+    background: var(--bg-status-pending);
+  }
+}

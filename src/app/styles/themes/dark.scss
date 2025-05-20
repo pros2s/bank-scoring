@@ -13,13 +13,15 @@
   --negative-number-color: rgb(230 75 96);
   --switcher-color: rgb(255 234 0);
   --switcher-bg-color: rgb(242 187 45);
-  --switcher-bg-gradient: radial-gradient(
-    circle,
-    rgb(242 187 45 / 100%) 0%,
-    rgb(44 44 44 / 80%) 76%
-  );
+  --switcher-bg-gradient: radial-gradient(circle, rgb(242 187 45 / 100%) 0%, rgb(44 44 44 / 80%) 76%);
   --color-label-success: #3ce13c;
   --bg-border: #d8d8d8;
   --bg-nav-link: #313131;
   --color-placeholder: #adadad;
+  --bg-status-denied: #512d26;
+  --color-status-denied: #d05f2d;
+  --bg-status-approved: #386729;
+  --color-status-approved: #98e520;
+  --color-status-pending: #0ec5ff;
+  --bg-status-pending: #256077;
 }

@@ -1,4 +1,4 @@
-type ScoreStatusType = 'Approved' | 'Pending' | 'Denied';
+import { ScoreStatusType } from '@/shared/lib/types/scoring';
 
 export const getScoreStatus = (score: number): ScoreStatusType => {
   if (score < 500) return 'Denied';
