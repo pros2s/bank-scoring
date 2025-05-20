@@ -9,10 +9,8 @@ export const ConverterLink = memo(() => {
   const { t } = useTranslation();
 
   return (
-    <div>
-      <AppLink className='nav-link' to={RoutesPaths.converter} theme={AppLinkTheme.SECONDARY}>
-        {t('converter')}
-      </AppLink>
-    </div>
+    <AppLink className='nav-link' to={RoutesPaths.converter} theme={AppLinkTheme.SECONDARY}>
+      {t('converter')}
+    </AppLink>
   );
 });

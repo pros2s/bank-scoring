@@ -4,7 +4,7 @@ import { __BASE_FAKE_API__ } from '@/shared/api/api';
 import { CreditorType } from '@/widgets/CreditorItem';
 
 export const useCreditorsFetch = () => {
-  const [creditors, setCreditors] = useState<CreditorType[] | null>(null);
+  const [creditors, setCreditors] = useState<CreditorType[]>([]);
 
   const handleFetchCreditors = () => {
     fetch(`${__BASE_FAKE_API__}/creditors`)

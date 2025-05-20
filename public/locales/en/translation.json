@@ -64,9 +64,12 @@
   "creditors": "Creditors",
   "converter": "Converter",
   "rates": "Rates",
-  "none": "None",
   "yes": "Yes",
   "today": "Today",
   "yesterday": "Yesterday",
-  "deleteCreditor": "Delete creditor"
+  "deleteCreditor": "Delete creditor",
+  "searchCreditors": "Name, age or status",
+  "Approved": "Approved",
+  "Pending": "Pending",
+  "Denied": "Denied"
 }

@@ -66,9 +66,12 @@
   "creditors": "Кредиторы",
   "converter": "Конвертер",
   "rates": "Курсы валют",
-  "none": "Нет",
   "yes": "Есть",
   "today": "Сегодня",
   "yesterday": "Вчера",
-  "deleteCreditor": "Удалить кредитора"
+  "deleteCreditor": "Удалить кредитора",
+  "searchCreditors": "Имя, возраст или статус",
+  "Approved": "Принято",
+  "Pending": "В ожидании",
+  "Denied": "Отклонено"
 }

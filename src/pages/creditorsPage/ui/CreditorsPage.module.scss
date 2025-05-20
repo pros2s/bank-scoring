@@ -1,7 +1,17 @@
 .content {
   display: flex;
   flex-direction: column;
-  gap: 9px;
+  gap: 30px;
   align-items: center;
   justify-content: flex-start;
+}
+
+.label {
+  font-weight: 500;
+}
+
+.input {
+  min-width: 280px;
+  max-width: none;
+  height: 40px;
 }
