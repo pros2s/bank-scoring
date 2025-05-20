@@ -1,6 +1,4 @@
-export type MaritalStatusType = 'single' | 'married' | 'divorced';
-export type EducationLevelType = 'none' | 'secondary' | 'higher' | 'bachelor' | 'master' | 'phd';
-export type AssetType = 'house' | 'apartment' | 'car';
+import { AssetType, EducationLevelType, MaritalStatusType } from '@/shared/lib/types/scoring';
 
 export interface ScoringSchema {
   name: string;

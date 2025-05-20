@@ -1,11 +1,8 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-import {
-  AssetType,
-  EducationLevelType,
-  MaritalStatusType,
-  ScoringSchema,
-} from '../types/ScoringSchema';
+import { AssetType, EducationLevelType, MaritalStatusType } from '@/shared/lib/types/scoring';
+
+import { ScoringSchema } from '../types/ScoringSchema';
 
 const initialState: ScoringSchema = {
   name: '',

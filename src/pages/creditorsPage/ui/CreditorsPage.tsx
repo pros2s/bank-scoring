@@ -1,19 +1,10 @@
 import { memo, useState, useEffect } from 'react';
 
 import { __BASE_FAKE_API__ } from '@/shared/api/api';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { CreditorItem, CreditorType } from '@/widgets/CreditorItem';
 
-interface CreditorType {
-  id: number;
-  name: string;
-  age: number;
-  income: number;
-  maritalStatus: string;
-  existingDebt: number;
-  hasCreditHistory: boolean;
-  creditScore: number;
-  status: string;
-  applicationDate: string;
-}
+import cls from './CreditorsPage.module.scss';
 
 const CreditorsPage = memo(() => {
   const [creditors, setCreditors] = useState<CreditorType[] | null>(null);
@@ -27,11 +18,11 @@ const CreditorsPage = memo(() => {
   }, []);
 
   return (
-    <div>
+    <section className={classNames(cls.content, ['content'])}>
       {creditors?.map((cr) => (
-        <div key={cr.id}>{JSON.stringify(cr)}</div>
+        <CreditorItem key={cr.id} creditor={cr} />
       ))}
-    </div>
+    </section>
   );
 });
 

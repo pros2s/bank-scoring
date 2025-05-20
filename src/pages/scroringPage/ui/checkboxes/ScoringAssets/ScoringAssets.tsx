@@ -2,13 +2,13 @@ import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
+import { AssetType } from '@/shared/lib/types/scoring';
 import { CheckBox } from '@/shared/ui/CheckBox';
 import { FlexBox } from '@/shared/ui/FlexBox';
 import { Label } from '@/shared/ui/Label';
 
 import { getScoringAssets } from '../../../model/selectors/scoringSelectors';
 import { ScoringActions } from '../../../model/slice/ScoringSlice';
-import { AssetType } from '../../../model/types/ScoringSchema';
 
 const { addAsset, removeAsset } = ScoringActions;
 

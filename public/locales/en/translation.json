@@ -63,5 +63,9 @@
   "scoring": "Scoring",
   "creditors": "Creditors",
   "converter": "Converter",
-  "rates": "Rates"
+  "rates": "Rates",
+  "none": "None",
+  "yes": "Yes",
+  "today": "Today",
+  "yesterday": "Yesterday"
 }

@@ -6,13 +6,13 @@ import { useSelector } from 'react-redux';
 
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
+import { MaritalStatusType } from '@/shared/lib/types/scoring';
 import { Button, ButtonThemes } from '@/shared/ui/Button/Button';
 import { FlexBox } from '@/shared/ui/FlexBox';
 import { Label } from '@/shared/ui/Label';
 
 import { getScoringMaritalStatus } from '../../../model/selectors/scoringSelectors';
 import { ScoringActions } from '../../../model/slice/ScoringSlice';
-import { MaritalStatusType } from '../../../model/types/ScoringSchema';
 import selCls from '../../ScoringSelect.module.scss';
 
 import cls from './ScoringMaritalStatus.module.scss';

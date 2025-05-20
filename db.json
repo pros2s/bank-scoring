@@ -35,6 +35,28 @@
       "childrenCount": "",
       "score": 470,
       "status": "Denied"
+    },
+    {
+      "id": "3db9757b-a968-407e-a38a-11bf546b7c1f",
+      "name": "Name Example",
+      "age": "25",
+      "income": "100000",
+      "maritalStatus": "married",
+      "existingDebt": "20000",
+      "hasCreditHistory": true,
+      "hasCriminalRecord": true,
+      "education": "higher",
+      "applicationDate": 1747746176750,
+      "employmentYears": "5",
+      "savings": "150000",
+      "assets": [
+        "house",
+        "car",
+        "apartment"
+      ],
+      "childrenCount": "2",
+      "score": 780,
+      "status": "Approved"
     }
   ]
 }
