@@ -35,7 +35,6 @@
   "savings": "Сбережения",
   "yourSavings": "Ваши сбережения",
   "scoringAssets": "Сбережения",
-  "yourScoringAssets": "Ваши сбережения",
   "children": "Дети",
   "yourChildren": "Ваши дети",
   "childrenError": "Некорректный возраст детей",
@@ -51,5 +50,8 @@
   "master": "Магистр",
   "higher": "Высшее",
   "phd": "Доктор наук",
-  "none": "Нет"
+  "none": "Нет",
+  "house": "Дом",
+  "apartment": "Квартира",
+  "car": "Машина"
 }

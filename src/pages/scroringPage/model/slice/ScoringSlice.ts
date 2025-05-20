@@ -70,11 +70,6 @@ export const ScoringSlice = createSlice({
       state.education = action.payload;
     },
 
-    //     existingDebtError: '',
-    // childrenCountError: '',
-    // employmentYearsError: '',
-    // savingsError: '',
-
     setHasCriminalRecord: (state, action: PayloadAction<boolean>) => {
       state.hasCriminalRecord = action.payload;
     },
@@ -97,8 +92,11 @@ export const ScoringSlice = createSlice({
     },
     // --------------------------------------------------------------
 
-    setAssets: (state, action: PayloadAction<AssetType[]>) => {
-      state.assets = action.payload;
+    addAsset: (state, action: PayloadAction<AssetType>) => {
+      state.assets.push(action.payload);
+    },
+    removeAsset: (state, action: PayloadAction<AssetType>) => {
+      state.assets = state.assets.filter((asset) => asset !== action.payload);
     },
 
     // childrenCount

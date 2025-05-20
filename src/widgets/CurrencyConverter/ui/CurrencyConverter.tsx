@@ -120,7 +120,7 @@ export const CurrencyConverter = memo(() => {
     element = (
       <div className={cls.inner}>
         <section className={cls.tools}>
-          <div>
+          <div className={cls.container}>
             <h3 className='label'>{t('convert')}</h3>
             <div className={classNames(cls.convert, ['input'])}>
               <Input

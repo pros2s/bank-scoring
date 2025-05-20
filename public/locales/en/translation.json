@@ -40,7 +40,6 @@
   "savings": "Savings",
   "yourSavings": "Your savings",
   "scoringAssets": "Scoring assets",
-  "yourScoringAssets": "Your scoring assets",
   "children": "Children",
   "yourChildren": "Your children",
   "childrenError": "Incorrect children years",
@@ -52,5 +51,8 @@
   "secondary": "Secondary",
   "master": "Master",
   "phd": "Phd",
-  "none": "None"
+  "none": "None",
+  "house": "House",
+  "apartment": "Apartment",
+  "car": "Car"
 }
