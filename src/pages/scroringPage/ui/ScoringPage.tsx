@@ -12,6 +12,7 @@ import { useGetScoringErrorMessage } from '../hooks/useGetScoringErrorMessage';
 import { ScoringReducer } from '../model/slice/ScoringSlice';
 
 import { ScoringAge } from './ScoringAge/ScoringAge';
+import { ScoringEducation } from './ScoringEducation/ScoringEducation';
 import { ScoringExistingDebt } from './ScoringExistingDebt/ScoringExistingDebt';
 import { ScoringHasCreditHistory } from './ScoringHasCreditHistory/ScoringHasCreditHistory';
 import { ScoringIncome } from './ScoringIncome/ScoringIncome';
@@ -36,6 +37,7 @@ const ScoringPage = memo(() => {
 
         <FlexBox align='center' gap={50}>
           <ScoringExistingDebt />
+          <ScoringEducation />
         </FlexBox>
 
         <ScoringHasCreditHistory />

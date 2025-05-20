@@ -46,5 +46,11 @@
   "childrenError": "Incorrect children years",
   "married": "Married",
   "divorced": "Divorced",
-  "single": "Single"
+  "single": "Single",
+  "bachelor": "Bachelor",
+  "higher": "Higher",
+  "secondary": "Secondary",
+  "master": "Master",
+  "phd": "Phd",
+  "none": "None"
 }

@@ -1,0 +1,115 @@
+.container {
+  position: relative;
+  width: 150px;
+}
+
+.trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  height: 40px;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+
+  transition: transform 0.1s linear;
+}
+
+.list {
+  pointer-events: none;
+  scrollbar-color: var(--secondary-color);
+  scrollbar-width: auto;
+
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+
+  overflow-y: auto;
+
+  width: 100%;
+  height: 0;
+
+  opacity: 0;
+  background: var(--inner-bg-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+
+  transition: all 0.2s linear;
+
+  &::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #8c8c8c;
+    border-radius: 20px;
+  }
+
+  &.shown {
+    pointer-events: auto;
+    opacity: 1;
+  }
+
+  @media screen and (max-width: 820px) {
+    width: 340px;
+  }
+
+  @media screen and (max-width: 620px) {
+    width: 300px;
+  }
+
+  @media screen and (max-width: 420px) {
+    width: 230px;
+  }
+
+  @media screen and (max-width: 330px) {
+    width: 210px;
+  }
+
+  @media screen and (max-width: 310px) {
+    width: 190px;
+  }
+
+  @media screen and (max-width: 290px) {
+    width: 170px;
+  }
+}
+
+.item {
+  cursor: pointer;
+
+  display: flex;
+
+  width: 100%;
+  padding: 5px 10px;
+
+  border-radius: var(--border-radius);
+
+  transition: background 0.1s linear;
+
+  span {
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+
+  &:hover,
+  &:focus {
+    background: var(--active-color);
+  }
+}
+
+.arrow {
+  transition: transform 0.1s linear;
+
+  &.rotate {
+    transform: rotate(180deg);
+  }
+}

@@ -10,17 +10,24 @@ import { Button, ButtonThemes } from '@/shared/ui/Button/Button';
 import { FlexBox } from '@/shared/ui/FlexBox';
 import { Label } from '@/shared/ui/Label';
 
-import { getScoringMaritalStatus } from '../../model/selectors/scoringSelectors';
+import { getScoringEducation } from '../../model/selectors/scoringSelectors';
 import { ScoringActions } from '../../model/slice/ScoringSlice';
-import { MaritalStatusType } from '../../model/types/ScoringSchema';
+import { EducationLevelType } from '../../model/types/ScoringSchema';
 import selCls from '../ScoringSelect.module.scss';
 
-import cls from './ScoringMaritalStatus.module.scss';
+import cls from './ScoringEducation.module.scss';
 
-const defaultStatuses: MaritalStatusType[] = ['single', 'married', 'divorced'];
-const { setMaritalStatus } = ScoringActions;
+const defaultStatuses: EducationLevelType[] = [
+  'secondary',
+  'bachelor',
+  'higher',
+  'master',
+  'phd',
+  'none',
+];
+const { setEducation } = ScoringActions;
 
-export const ScoringMaritalStatus = () => {
+export const ScoringEducation = () => {
   const { t } = useTranslation();
 
   const [isShow, setIsShow] = useState(false);
@@ -29,16 +36,16 @@ export const ScoringMaritalStatus = () => {
   };
 
   const dispatch = useAppDispatch();
-  const maritalStatus = useSelector(getScoringMaritalStatus) ?? '';
+  const education = useSelector(getScoringEducation) ?? '';
 
-  const handleChange = (value: MaritalStatusType) => () => {
-    dispatch(setMaritalStatus(value));
+  const handleChange = (value: EducationLevelType) => () => {
+    dispatch(setEducation(value));
     setIsShow(false);
   };
 
   return (
     <FlexBox className={selCls.container} direction='column' gap={5}>
-      <Label label={`${t('maritalStatus')}`} />
+      <Label label={`${t('education')}`} />
 
       <Button
         className={selCls.trigger}
@@ -46,7 +53,7 @@ export const ScoringMaritalStatus = () => {
         theme={ButtonThemes.CLEAR}
         tabIndex={0}
       >
-        {t(maritalStatus)}
+        {t(education)}
 
         <BsCaretDownFill className={classNames(selCls.arrow, [], { [selCls.rotate]: isShow })} />
       </Button>
@@ -67,4 +74,4 @@ export const ScoringMaritalStatus = () => {
   );
 };
 
-ScoringMaritalStatus.displayName = 'ScoringMaritalStatus';
+ScoringEducation.displayName = 'ScoringEducation';
