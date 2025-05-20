@@ -6,48 +6,50 @@ import { FlexBox } from '@/shared/ui/FlexBox';
 import { Input } from '@/shared/ui/Input/Input';
 import { Label } from '@/shared/ui/Label';
 
-import { getScoringSavings } from '../../model/selectors/scoringSelectors';
+import { getScoringChildrenCount } from '../../model/selectors/scoringSelectors';
 import { ScoringActions } from '../../model/slice/ScoringSlice';
 import scCls from '../ScoringPage.module.scss';
 
-const { setSavings, setSavingsError } = ScoringActions;
+const { setChildrenCount, setChildrenCountError } = ScoringActions;
 
-export const ScoringSavings = () => {
+export const ScoringChildrenCount = () => {
   const { t } = useTranslation();
 
   const dispatch = useAppDispatch();
-  const Savings = useSelector(getScoringSavings);
+  const childrenCount = useSelector(getScoringChildrenCount);
 
   const handleChange = (val: string) => {
-    dispatch(setSavings(val));
+    dispatch(setChildrenCount(val));
 
     const numValue = Number(val);
     const isNumber = !Number.isNaN(numValue);
     const isLess = numValue < 0;
+    const isMore = numValue > 20;
 
-    if (!isNumber || isLess) {
-      dispatch(setSavingsError('savingsError'));
+    if (!isNumber || isLess || isMore) {
+      dispatch(setChildrenCountError('childrenError'));
       return;
     }
 
-    dispatch(setSavingsError(''));
+    dispatch(setChildrenCountError(''));
   };
 
   return (
     <FlexBox className={scCls.container} direction='column' gap={5}>
-      <Label label={`${t('savings')}, ₽`} />
+      <Label label={t('children')} />
 
       <div className='input'>
         <Input
-          placeholder={t('savings')}
-          value={Savings}
+          placeholder={t('children')}
+          value={childrenCount}
           onChange={handleChange}
           type='number'
           min={0}
+          max={20}
         />
       </div>
     </FlexBox>
   );
 };
 
-ScoringSavings.displayName = 'ScoringSavings';
+ScoringChildrenCount.displayName = 'ScoringChildrenCount';

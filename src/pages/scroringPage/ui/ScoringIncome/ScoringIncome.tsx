@@ -35,7 +35,7 @@ export const ScoringIncome = () => {
 
   return (
     <FlexBox className={scCls.container} direction='column' gap={5}>
-      <Label label={`${t('yourIncome')}, ₽`} />
+      <Label label={`${t('income')}, ₽`} />
 
       <div className='input'>
         <Input

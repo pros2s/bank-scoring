@@ -7,6 +7,7 @@ import {
   getScoringEmploymentYearsError,
   getScoringExistingDebtError,
   getScoringIncomeError,
+  getScoringSavingsError,
 } from '../model/selectors/scoringSelectors';
 
 export const useGetScoringErrorMessage = () => {
@@ -15,6 +16,7 @@ export const useGetScoringErrorMessage = () => {
   const incomeError = useSelector(getScoringIncomeError) ?? '';
   const ageError = useSelector(getScoringAgeError) ?? '';
   const existingDebtError = useSelector(getScoringExistingDebtError) ?? '';
+  const savingsError = useSelector(getScoringSavingsError) ?? '';
   const scoringChildrenCountError = useSelector(getScoringChildrenCountError) ?? '';
   const scoringEmploymentYearsError = useSelector(getScoringEmploymentYearsError) ?? '';
 
@@ -22,6 +24,7 @@ export const useGetScoringErrorMessage = () => {
     ageError ||
       incomeError ||
       existingDebtError ||
+      savingsError ||
       scoringChildrenCountError ||
       scoringEmploymentYearsError ||
       '',

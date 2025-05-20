@@ -16,6 +16,7 @@ export const getScoringScore = (state: StateSchema) => state.scoring?.score;
 export const getScoringAgeError = (state: StateSchema) => state.scoring?.ageError;
 export const getScoringIncomeError = (state: StateSchema) => state.scoring?.incomeError;
 export const getScoringExistingDebtError = (state: StateSchema) => state.scoring?.existingDebtError;
+export const getScoringSavingsError = (state: StateSchema) => state.scoring?.savingsError;
 export const getScoringChildrenCountError = (state: StateSchema) =>
   state.scoring?.childrenCountError;
 export const getScoringEmploymentYearsError = (state: StateSchema) =>

@@ -13,6 +13,7 @@ import { ScoringReducer } from '../model/slice/ScoringSlice';
 
 import { ScoringAge } from './ScoringAge/ScoringAge';
 import { ScoringAssets } from './ScoringAssets/ScoringAssets';
+import { ScoringChildrenCount } from './ScoringChildrenCount/ScoringChildrenCount';
 import { ScoringEducation } from './ScoringEducation/ScoringEducation';
 import { ScoringExistingDebt } from './ScoringExistingDebt/ScoringExistingDebt';
 import { ScoringHasCreditHistory } from './ScoringHasCreditHistory/ScoringHasCreditHistory';
@@ -31,20 +32,21 @@ const ScoringPage = memo(() => {
   return (
     <DynamicReducerLoader removeAfterUnmount reducers={reducers}>
       <section className={classNames(cls.content, ['content'])}>
-        <FlexBox align='center' gap={50} isWrap>
+        <FlexBox gap={50} isWrap>
           <ScoringAge />
           <ScoringIncome />
           <ScoringMaritalStatus />
         </FlexBox>
 
-        <FlexBox align='center' gap={50} isWrap>
+        <FlexBox gap={50} isWrap>
           <ScoringExistingDebt />
           <ScoringEducation />
           <ScoringSavings />
         </FlexBox>
 
-        <FlexBox align='center' gap={50} isWrap>
+        <FlexBox gap={50} isWrap>
           <ScoringAssets />
+          <ScoringChildrenCount />
           <ScoringHasCreditHistory />
         </FlexBox>
 
