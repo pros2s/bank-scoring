@@ -20,7 +20,7 @@
   border: 1px solid var(--primary-color);
 
   &:hover {
-    color: white;
+    color: var(--bg-color);
     background-color: var(--primary-color);
   }
 }

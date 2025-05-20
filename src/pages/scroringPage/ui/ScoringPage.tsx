@@ -13,21 +13,22 @@ import { Label } from '@/shared/ui/Label';
 import { useGetScoringErrorMessage } from '../hooks/useGetScoringErrorMessage';
 import { ScoringReducer } from '../model/slice/ScoringSlice';
 
-import { ScoringAge } from './ScoringAge/ScoringAge';
-import { ScoringAssets } from './ScoringAssets/ScoringAssets';
-import { ScoringChildrenCount } from './ScoringChildrenCount/ScoringChildrenCount';
-import { ScoringEducation } from './ScoringEducation/ScoringEducation';
-import { ScoringEmploymentYears } from './ScoringEmploymentYears/ScoringEmploymentYears';
-import { ScoringExistingDebt } from './ScoringExistingDebt/ScoringExistingDebt';
-import { ScoringGauge } from './ScoringGauge/ScoringGauge';
-import { ScoringHasCreditHistory } from './ScoringHasCreditHistory/ScoringHasCreditHistory';
-import { ScoringHasCriminalRecord } from './ScoringHasCriminalRecord/ScoringHasCriminalRecord';
-import { ScoringIncome } from './ScoringIncome/ScoringIncome';
-import { ScoringMaritalStatus } from './ScoringMaritalStatus/ScoringMaritalStatus';
-import { ScoringName } from './ScoringName/ScoringName';
 import cls from './ScoringPage.module.scss';
-import { ScoringSavings } from './ScoringSavings/ScoringSavings';
-import { ScoringSurname } from './ScoringSurname/ScoringSurname';
+import { ScoringGauge } from './actions/ScoringGauge/ScoringGauge';
+import { ScoringReset } from './actions/ScoringReset/ScoringReset';
+import { ScoringAssets } from './checkboxes/ScoringAssets/ScoringAssets';
+import { ScoringEducation } from './checkboxes/ScoringEducation/ScoringEducation';
+import { ScoringHasCreditHistory } from './checkboxes/ScoringHasCreditHistory/ScoringHasCreditHistory';
+import { ScoringHasCriminalRecord } from './checkboxes/ScoringHasCriminalRecord/ScoringHasCriminalRecord';
+import { ScoringEmploymentYears } from './money/ScoringEmploymentYears/ScoringEmploymentYears';
+import { ScoringIncome } from './money/ScoringIncome/ScoringIncome';
+import { ScoringSavings } from './money/ScoringSavings/ScoringSavings';
+import { ScoringChildrenCount } from './personal/ScoringChildrenCount/ScoringChildrenCount';
+import { ScoringExistingDebt } from './personal/ScoringExistingDebt/ScoringExistingDebt';
+import { ScoringMaritalStatus } from './personal/ScoringMaritalStatus/ScoringMaritalStatus';
+import { ScoringAge } from './required/ScoringAge/ScoringAge';
+import { ScoringName } from './required/ScoringName/ScoringName';
+import { ScoringSurname } from './required/ScoringSurname/ScoringSurname';
 
 const reducers: ReducersList = {
   scoring: ScoringReducer,
@@ -77,7 +78,10 @@ const ScoringPage = memo(() => {
 
         <Label className={cls.label} info={errorMessage} isError={!!errorMessage} />
 
-        <ScoringGauge />
+        <FlexBox className={cls.actions} justify='between' gap={50} isWrap>
+          <ScoringReset />
+          <ScoringGauge />
+        </FlexBox>
       </section>
     </DynamicReducerLoader>
   );
