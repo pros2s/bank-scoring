@@ -13,6 +13,7 @@ import { ScoringReducer } from '../model/slice/ScoringSlice';
 
 import { ScoringAge } from './ScoringAge/ScoringAge';
 import { ScoringExistingDebt } from './ScoringExistingDebt/ScoringExistingDebt';
+import { ScoringHasCreditHistory } from './ScoringHasCreditHistory/ScoringHasCreditHistory';
 import { ScoringIncome } from './ScoringIncome/ScoringIncome';
 import { ScoringMaritalStatus } from './ScoringMaritalStatus/ScoringMaritalStatus';
 import cls from './ScoringPage.module.scss';
@@ -36,6 +37,8 @@ const ScoringPage = memo(() => {
         <FlexBox align='center' gap={50}>
           <ScoringExistingDebt />
         </FlexBox>
+
+        <ScoringHasCreditHistory />
 
         <Label info={errorMessage} isError={!!errorMessage} />
       </section>
