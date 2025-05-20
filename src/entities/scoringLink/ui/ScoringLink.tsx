@@ -1,16 +1,14 @@
-import { useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 import { RoutesPaths } from '@/shared/lib/routes/routes';
 import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink/AppLink';
 
 export const ScoringLink = () => {
-  const { pathname } = useLocation();
-
-  if (pathname === RoutesPaths.scoring) return null;
+  const { t } = useTranslation();
 
   return (
-    <AppLink to={RoutesPaths.scoring} theme={AppLinkTheme.SECONDARY}>
-      Scoring
+    <AppLink to={RoutesPaths.scoring} className='nav-link' theme={AppLinkTheme.SECONDARY}>
+      {t('scoring')}
     </AppLink>
   );
 };

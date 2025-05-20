@@ -59,5 +59,9 @@
   "resetData": "Reset data",
   "sendData": "Send data",
   "serverError": "Server error",
-  "clientError": "Client error"
+  "clientError": "Client error",
+  "scoring": "Scoring",
+  "creditors": "Creditors",
+  "converter": "Converter",
+  "rates": "Rates"
 }

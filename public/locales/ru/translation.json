@@ -61,5 +61,9 @@
   "resetData": "Сбросить данные",
   "sendData": "Отправить данные",
   "serverError": "Ошибка сервера",
-  "clientError": "Ошибка клиента"
+  "clientError": "Ошибка клиента",
+  "scoring": "Скоринг",
+  "creditors": "Кредиторы",
+  "converter": "Конвертер",
+  "rates": "Курсы валют"
 }

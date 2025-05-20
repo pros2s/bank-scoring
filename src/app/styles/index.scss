@@ -90,6 +90,13 @@ body {
   align-items: center;
 }
 
+.nav-link {
+  padding: 3px 10px;
+  color: #fff;
+  background: var(--bg-nav-link);
+  border-radius: var(--border-radius);
+}
+
 .content {
   min-height: 200px;
   margin: 0 auto;

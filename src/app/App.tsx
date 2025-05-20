@@ -4,6 +4,7 @@ import { RoutesProvider } from '@/app/providers/RoutesProvider';
 import { useThemes } from '@/app/providers/ThemesProvider';
 import { ConverterLink } from '@/entities/converterLink';
 import { CreditorsLink } from '@/entities/creditorsLink';
+import { RatesLink } from '@/entities/ratesLink';
 import { ScoringLink } from '@/entities/scoringLink';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { LangSwitcher } from '@/widgets/LangSwitcher';
@@ -19,8 +20,9 @@ const App = memo(() => {
           <div className='navbar-inner'>
             <div className='navbar-links'>
               <ScoringLink />
-              <ConverterLink />
               <CreditorsLink />
+              <ConverterLink />
+              <RatesLink />
             </div>
             <div>
               <LangSwitcher />
