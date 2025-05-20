@@ -10,8 +10,8 @@ import {
 const initialState: ScoringSchema = {
   name: '',
   surname: '',
-  age: '',
-  income: '',
+  age: '18',
+  income: '50000',
   maritalStatus: 'single',
   existingDebt: '',
   hasCreditHistory: false,
@@ -21,7 +21,7 @@ const initialState: ScoringSchema = {
   savings: '',
   assets: [],
   childrenCount: '',
-  score: '',
+  score: 400,
 
   ageError: '',
   incomeError: '',
@@ -119,7 +119,7 @@ export const ScoringSlice = createSlice({
     },
     // --------------------------------------------------------------
 
-    setScore: (state, action: PayloadAction<string>) => {
+    setScore: (state, action: PayloadAction<number>) => {
       state.score = action.payload;
     },
   },

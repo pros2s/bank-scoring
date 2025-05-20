@@ -16,7 +16,7 @@ export const ScoringExistingDebt = () => {
   const { t } = useTranslation();
 
   const dispatch = useAppDispatch();
-  const ExistingDebt = useSelector(getScoringExistingDebt);
+  const existingDebt = useSelector(getScoringExistingDebt);
 
   const handleChange = (val: string) => {
     dispatch(setExistingDebt(val));
@@ -40,10 +40,11 @@ export const ScoringExistingDebt = () => {
       <div className='input'>
         <Input
           placeholder={t('debt')}
-          value={ExistingDebt}
+          value={existingDebt}
           onChange={handleChange}
           type='number'
           min={0}
+          step={10000}
         />
       </div>
     </FlexBox>

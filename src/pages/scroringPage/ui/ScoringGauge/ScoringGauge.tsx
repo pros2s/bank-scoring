@@ -3,14 +3,17 @@ import { useSelector } from 'react-redux';
 
 import { getScoringScore } from '../../model/selectors/scoringSelectors';
 
+import { useScore } from './hooks/useScore';
+
 export const ScoringGauge = () => {
   const score = useSelector(getScoringScore);
+  useScore();
 
   return (
     <GaugeComponent
-      value={500}
+      value={score}
       minValue={300}
-      maxValue={850}
+      maxValue={700}
       type='radial'
       arc={{
         width: 0.4,
@@ -40,18 +43,15 @@ export const ScoringGauge = () => {
             showTick: true,
           },
           {
-            limit: 700,
             color: '#F5CD19',
-            showTick: true,
-          },
-          {
-            color: '#EA4228',
           },
         ],
       }}
       pointer={{
         color: 'var(--secondary-color)',
         length: 0.5,
+        animationDelay: 0,
+        animationDuration: 500,
       }}
       labels={{
         valueLabel: {
@@ -68,14 +68,7 @@ export const ScoringGauge = () => {
             formatTextValue: (value: string) => value,
             style: { fontSize: 12 },
           },
-          ticks: [
-            { value: 300 },
-            { value: 400 },
-            { value: 500 },
-            { value: 600 },
-            { value: 700 },
-            { value: 850 },
-          ],
+          ticks: [{ value: 300 }, { value: 400 }, { value: 500 }, { value: 600 }, { value: 700 }],
         },
       }}
     />

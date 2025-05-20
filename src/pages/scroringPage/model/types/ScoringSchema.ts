@@ -34,5 +34,5 @@ export interface ScoringSchema {
   childrenCount: string;
   childrenCountError?: string;
 
-  score?: string;
+  score?: number;
 }

@@ -44,6 +44,7 @@ export const ScoringIncome = () => {
           onChange={handleChange}
           type='number'
           min={0}
+          step={10000}
         />
       </div>
     </FlexBox>
