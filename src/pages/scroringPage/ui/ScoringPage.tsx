@@ -19,6 +19,7 @@ import { ScoringChildrenCount } from './ScoringChildrenCount/ScoringChildrenCoun
 import { ScoringEducation } from './ScoringEducation/ScoringEducation';
 import { ScoringEmploymentYears } from './ScoringEmploymentYears/ScoringEmploymentYears';
 import { ScoringExistingDebt } from './ScoringExistingDebt/ScoringExistingDebt';
+import { ScoringGauge } from './ScoringGauge/ScoringGauge';
 import { ScoringHasCreditHistory } from './ScoringHasCreditHistory/ScoringHasCreditHistory';
 import { ScoringHasCriminalRecord } from './ScoringHasCriminalRecord/ScoringHasCriminalRecord';
 import { ScoringIncome } from './ScoringIncome/ScoringIncome';
@@ -40,7 +41,7 @@ const ScoringPage = memo(() => {
   return (
     <DynamicReducerLoader removeAfterUnmount reducers={reducers}>
       <section className={classNames(cls.content, ['content'])}>
-        <FlexBox className={cls.header} align='center' direction='column' gap={14}>
+        <FlexBox className={cls.header} align='center' direction='column' gap={10}>
           <h1>{t('bankScoring')}</h1>
 
           <p>{t('fillData')}</p>
@@ -75,6 +76,8 @@ const ScoringPage = memo(() => {
         </FlexBox>
 
         <Label info={errorMessage} isError={!!errorMessage} />
+
+        <ScoringGauge />
       </section>
     </DynamicReducerLoader>
   );

@@ -61,6 +61,7 @@ export const ScoringEducation = () => {
       <div className={classNames(selCls.list, [], { [selCls.shown]: isShow, [cls.shown]: isShow })}>
         {defaultStatuses?.map((status) => (
           <Button
+            key={status}
             className={selCls.item}
             onClick={handleChange(status)}
             theme={ButtonThemes.CLEAR}
