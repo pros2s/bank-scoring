@@ -72,11 +72,20 @@ export const useScore = () => {
 
     // education
     switch (education) {
+      case 'bachelor':
+        score += 10;
+        break;
       case 'higher':
-        score += 30;
+        score += 20;
         break;
       case 'secondary':
-        score += 10;
+        score += 20;
+        break;
+      case 'master':
+        score += 30;
+        break;
+      case 'phd':
+        score += 30;
         break;
       case 'none':
         score -= 10;

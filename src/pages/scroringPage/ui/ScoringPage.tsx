@@ -75,7 +75,7 @@ const ScoringPage = memo(() => {
           </FlexBox>
         </FlexBox>
 
-        <Label info={errorMessage} isError={!!errorMessage} />
+        <Label className={cls.label} info={errorMessage} isError={!!errorMessage} />
 
         <ScoringGauge />
       </section>

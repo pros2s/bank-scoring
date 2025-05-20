@@ -7,21 +7,27 @@ import {
   getScoringEmploymentYearsError,
   getScoringExistingDebtError,
   getScoringIncomeError,
+  getScoringNameError,
   getScoringSavingsError,
+  getScoringSurnameError,
 } from '../model/selectors/scoringSelectors';
 
 export const useGetScoringErrorMessage = () => {
   const { t } = useTranslation();
 
-  const incomeError = useSelector(getScoringIncomeError) ?? '';
+  const nameError = useSelector(getScoringNameError) ?? '';
+  const surNameError = useSelector(getScoringSurnameError) ?? '';
   const ageError = useSelector(getScoringAgeError) ?? '';
+  const incomeError = useSelector(getScoringIncomeError) ?? '';
   const existingDebtError = useSelector(getScoringExistingDebtError) ?? '';
   const savingsError = useSelector(getScoringSavingsError) ?? '';
   const scoringChildrenCountError = useSelector(getScoringChildrenCountError) ?? '';
   const scoringEmploymentYearsError = useSelector(getScoringEmploymentYearsError) ?? '';
 
   return t(
-    ageError ||
+    nameError ||
+      surNameError ||
+      ageError ||
       incomeError ||
       existingDebtError ||
       savingsError ||

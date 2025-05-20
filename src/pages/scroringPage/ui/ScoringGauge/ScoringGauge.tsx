@@ -13,7 +13,7 @@ export const ScoringGauge = () => {
     <GaugeComponent
       value={score}
       minValue={300}
-      maxValue={700}
+      maxValue={850}
       type='radial'
       arc={{
         width: 0.4,
@@ -40,6 +40,11 @@ export const ScoringGauge = () => {
           {
             limit: 600,
             color: '#5BE12C',
+            showTick: true,
+          },
+          {
+            limit: 700,
+            color: '#F5CD19',
             showTick: true,
           },
           {

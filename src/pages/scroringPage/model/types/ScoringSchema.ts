@@ -4,7 +4,9 @@ export type AssetType = 'house' | 'apartment' | 'car';
 
 export interface ScoringSchema {
   name: string;
+  nameError?: string;
   surname: string;
+  surnameError?: string;
 
   age: string;
   ageError?: string;

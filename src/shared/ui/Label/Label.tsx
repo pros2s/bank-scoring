@@ -11,10 +11,12 @@ interface LabelProps {
   info?: string;
   isError?: boolean;
   isSuccess?: boolean;
+
+  className?: string;
 }
 
-export const Label = memo(({ label, info, isError, isSuccess }: LabelProps) => (
-  <FlexBox align='center' gap={10}>
+export const Label = memo(({ label, info, isError, isSuccess, className }: LabelProps) => (
+  <FlexBox className={className} align='center' gap={10}>
     {!!label && <p className={`${cls.label} ellipsis`}>{label}</p>}
 
     {!!info && (

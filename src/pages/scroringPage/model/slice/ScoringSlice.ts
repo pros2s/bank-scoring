@@ -10,7 +10,7 @@ import {
 const initialState: ScoringSchema = {
   name: '',
   surname: '',
-  age: '18',
+  age: '',
   income: '50000',
   maritalStatus: 'single',
   existingDebt: '',
@@ -23,6 +23,8 @@ const initialState: ScoringSchema = {
   childrenCount: '',
   score: 400,
 
+  nameError: '',
+  surnameError: '',
   ageError: '',
   incomeError: '',
   existingDebtError: '',
@@ -39,8 +41,16 @@ export const ScoringSlice = createSlice({
     setName: (state, action: PayloadAction<string>) => {
       state.name = action.payload;
     },
+    setNameError: (state, action: PayloadAction<string>) => {
+      state.nameError = action.payload;
+    },
+    // --------------------------------------------------------------
+    // surname
     setSurname: (state, action: PayloadAction<string>) => {
       state.surname = action.payload;
+    },
+    setSurnameError: (state, action: PayloadAction<string>) => {
+      state.surnameError = action.payload;
     },
     // --------------------------------------------------------------
 

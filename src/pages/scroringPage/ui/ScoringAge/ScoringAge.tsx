@@ -37,7 +37,7 @@ export const ScoringAge = () => {
   };
   return (
     <FlexBox direction='column' gap={5}>
-      <Label label={t('age')} />
+      <Label label={`${t('age')} *`} />
       <div className={classNames(cls.input, ['input'])}>
         <Input
           placeholder={t('age')}
