@@ -24,7 +24,7 @@ export const ScoringHasCreditHistory = () => {
   return (
     <CheckBox
       id='has-credit-history'
-      className={cls.criminal}
+      className={cls.credit}
       text={t('creditHistory')}
       isChecked={hasCreditHistory}
       onCheckBoxChange={handleChange}

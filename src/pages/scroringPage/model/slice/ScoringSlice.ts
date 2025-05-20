@@ -8,6 +8,8 @@ import {
 } from '../types/ScoringSchema';
 
 const initialState: ScoringSchema = {
+  name: '',
+  surname: '',
   age: '',
   income: '',
   maritalStatus: 'single',
@@ -33,6 +35,15 @@ export const ScoringSlice = createSlice({
   name: 'Scoring',
   initialState,
   reducers: {
+    // name
+    setName: (state, action: PayloadAction<string>) => {
+      state.name = action.payload;
+    },
+    setSurname: (state, action: PayloadAction<string>) => {
+      state.surname = action.payload;
+    },
+    // --------------------------------------------------------------
+
     // age
     setAge: (state, action: PayloadAction<string>) => {
       state.age = action.payload;

@@ -19,8 +19,9 @@
   "goConverterSmall": "К конвертеру",
   "registration": "Регистрация",
   "autorization": "Авторизация",
+  "name": "Имя",
+  "surname": "Фамилия",
   "age": "Возраст",
-  "yourAge": "Ваш возраст",
   "yourIncome": "Ваш доход",
   "income": "Доход",
   "maritalStatus": "Семейное положение",
@@ -50,5 +51,6 @@
   "none": "Нет",
   "house": "Дом",
   "apartment": "Квартира",
-  "car": "Машина"
+  "car": "Машина",
+  "years": "лет"
 }

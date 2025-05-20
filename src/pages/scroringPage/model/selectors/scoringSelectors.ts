@@ -1,5 +1,7 @@
 import { StateSchema } from '@/app/providers/StoreProvider';
 
+export const getScoringName = (state: StateSchema) => state.scoring?.name;
+export const getScoringSurname = (state: StateSchema) => state.scoring?.surname;
 export const getScoringAge = (state: StateSchema) => state.scoring?.age;
 export const getScoringIncome = (state: StateSchema) => state.scoring?.income;
 export const getScoringMaritalStatus = (state: StateSchema) => state.scoring?.maritalStatus;

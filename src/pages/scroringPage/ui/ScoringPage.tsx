@@ -15,12 +15,16 @@ import { ScoringAge } from './ScoringAge/ScoringAge';
 import { ScoringAssets } from './ScoringAssets/ScoringAssets';
 import { ScoringChildrenCount } from './ScoringChildrenCount/ScoringChildrenCount';
 import { ScoringEducation } from './ScoringEducation/ScoringEducation';
+import { ScoringEmploymentYears } from './ScoringEmploymentYears/ScoringEmploymentYears';
 import { ScoringExistingDebt } from './ScoringExistingDebt/ScoringExistingDebt';
 import { ScoringHasCreditHistory } from './ScoringHasCreditHistory/ScoringHasCreditHistory';
+import { ScoringHasCriminalRecord } from './ScoringHasCriminalRecord/ScoringHasCriminalRecord';
 import { ScoringIncome } from './ScoringIncome/ScoringIncome';
 import { ScoringMaritalStatus } from './ScoringMaritalStatus/ScoringMaritalStatus';
+import { ScoringName } from './ScoringName/ScoringName';
 import cls from './ScoringPage.module.scss';
 import { ScoringSavings } from './ScoringSavings/ScoringSavings';
+import { ScoringSurname } from './ScoringSurname/ScoringSurname';
 
 const reducers: ReducersList = {
   scoring: ScoringReducer,
@@ -33,21 +37,31 @@ const ScoringPage = memo(() => {
     <DynamicReducerLoader removeAfterUnmount reducers={reducers}>
       <section className={classNames(cls.content, ['content'])}>
         <FlexBox gap={50} isWrap>
+          <ScoringName />
+          <ScoringSurname />
           <ScoringAge />
-          <ScoringIncome />
-          <ScoringMaritalStatus />
         </FlexBox>
 
         <FlexBox gap={50} isWrap>
-          <ScoringExistingDebt />
-          <ScoringEducation />
+          <ScoringIncome />
+          <ScoringEmploymentYears />
           <ScoringSavings />
         </FlexBox>
 
         <FlexBox gap={50} isWrap>
-          <ScoringAssets />
+          <ScoringMaritalStatus />
           <ScoringChildrenCount />
-          <ScoringHasCreditHistory />
+          <ScoringExistingDebt />
+        </FlexBox>
+
+        <FlexBox gap={50} isWrap>
+          <ScoringAssets />
+          <ScoringEducation />
+
+          <FlexBox direction='column' gap={10}>
+            <ScoringHasCreditHistory />
+            <ScoringHasCriminalRecord />
+          </FlexBox>
         </FlexBox>
 
         <Label info={errorMessage} isError={!!errorMessage} />

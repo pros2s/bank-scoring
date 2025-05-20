@@ -3,6 +3,9 @@ export type EducationLevelType = 'none' | 'secondary' | 'higher' | 'bachelor' | 
 export type AssetType = 'house' | 'apartment' | 'car';
 
 export interface ScoringSchema {
+  name: string;
+  surname: string;
+
   age: string;
   ageError?: string;
 

@@ -19,8 +19,9 @@
   "goConverterSmall": "To converter",
   "registration": "Registration",
   "autorization": "Autorization",
+  "name": "Name",
+  "surname": "Surname",
   "age": "Age",
-  "yourAge": "Your age",
   "ageError": "Incorrect age",
   "incomeError": "Incorrect income",
   "income": "Income",
@@ -48,5 +49,6 @@
   "none": "None",
   "house": "House",
   "apartment": "Apartment",
-  "car": "Car"
+  "car": "Car",
+  "years": "years"
 }
