@@ -1,5 +1,7 @@
 import { memo } from 'react';
 
+import { useTranslation } from 'react-i18next';
+
 import { classNames } from '@/shared/lib/classNames/classNames';
 import {
   DynamicReducerLoader,
@@ -31,11 +33,19 @@ const reducers: ReducersList = {
 };
 
 const ScoringPage = memo(() => {
+  const { t } = useTranslation();
+
   const errorMessage = useGetScoringErrorMessage();
 
   return (
     <DynamicReducerLoader removeAfterUnmount reducers={reducers}>
       <section className={classNames(cls.content, ['content'])}>
+        <FlexBox className={cls.header} align='center' direction='column' gap={14}>
+          <h1>{t('bankScoring')}</h1>
+
+          <p>{t('fillData')}</p>
+        </FlexBox>
+
         <FlexBox gap={50} isWrap>
           <ScoringName />
           <ScoringSurname />

@@ -50,5 +50,8 @@
   "house": "House",
   "apartment": "Apartment",
   "car": "Car",
-  "years": "years"
+  "years": "years",
+  "bankScoring": "Bank scoring",
+  "bankScoringDescription": "Bank scoring is a method of assessing the creditworthiness of a borrower based on the analysis of their financial indicators and personal characteristics. It allows the bank to determine how likely it is that the borrower will repay the loan on time and in full. Bank scoring takes into account such factors as age, marital status, education, income, debt, credit history, and other factors that may affect the borrower's ability to repay the loan.",
+  "fillData": "Fill in the data to get a score"
 }
