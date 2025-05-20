@@ -69,5 +69,6 @@
   "none": "Нет",
   "yes": "Есть",
   "today": "Сегодня",
-  "yesterday": "Вчера"
+  "yesterday": "Вчера",
+  "deleteCreditor": "Удалить кредитора"
 }

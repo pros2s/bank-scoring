@@ -67,5 +67,6 @@
   "none": "None",
   "yes": "Yes",
   "today": "Today",
-  "yesterday": "Yesterday"
+  "yesterday": "Yesterday",
+  "deleteCreditor": "Delete creditor"
 }

@@ -33,10 +33,11 @@ export interface CreditorType {
 
 interface CreditorItemProps {
   creditor: CreditorType;
+  onDelete?: () => void;
   className?: string;
 }
 
-export const CreditorItem = ({ creditor, className }: CreditorItemProps) => {
+export const CreditorItem = ({ creditor, className, onDelete }: CreditorItemProps) => {
   const { t } = useTranslation();
 
   const getDate = useGetDate();
@@ -67,13 +68,13 @@ export const CreditorItem = ({ creditor, className }: CreditorItemProps) => {
           <p className={cls.label}>{getDate(applicationDate)}</p>
         </FlexBox>
 
-        <Button theme={ButtonThemes.CLEAR}>
+        <Button theme={ButtonThemes.CLEAR} onClick={onDelete}>
           <MdDelete className='size-20' />
         </Button>
       </FlexBox>
 
-      <FlexBox className='w-100' align='center' justify='between' gap={20}>
-        <FlexBox gap={30}>
+      <FlexBox className='w-100' align='center' justify='between' gap={20} isWrap>
+        <FlexBox gap={30} isWrap>
           <FlexBox direction='column' gap={10}>
             <FlexBox align='center' gap={5}>
               <p className={cls.label}>{t('age')}:</p>

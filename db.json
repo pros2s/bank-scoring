@@ -1,42 +1,6 @@
 {
   "creditors": [
     {
-      "id": "1ec11557-a1de-49b9-9276-f7e8d782a6f7",
-      "name": "Alex Born",
-      "age": "20",
-      "income": "50000",
-      "maritalStatus": "single",
-      "existingDebt": "",
-      "hasCreditHistory": false,
-      "hasCriminalRecord": false,
-      "education": "none",
-      "applicationDate": 1747741464824,
-      "employmentYears": "",
-      "savings": "",
-      "assets": [],
-      "childrenCount": "",
-      "score": 470,
-      "status": "Denied"
-    },
-    {
-      "id": "50f43efe-a59f-47e9-89f1-3d685c39691d",
-      "name": "Danya Cake",
-      "age": "21",
-      "income": "50000",
-      "maritalStatus": "single",
-      "existingDebt": "",
-      "hasCreditHistory": false,
-      "hasCriminalRecord": false,
-      "education": "none",
-      "applicationDate": 1747741502657,
-      "employmentYears": "",
-      "savings": "",
-      "assets": [],
-      "childrenCount": "",
-      "score": 470,
-      "status": "Denied"
-    },
-    {
       "id": "3db9757b-a968-407e-a38a-11bf546b7c1f",
       "name": "Name Example",
       "age": "25",

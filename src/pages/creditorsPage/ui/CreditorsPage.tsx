@@ -1,26 +1,31 @@
-import { memo, useState, useEffect } from 'react';
+import { memo, useEffect, useRef } from 'react';
 
-import { __BASE_FAKE_API__ } from '@/shared/api/api';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { CreditorItem, CreditorType } from '@/widgets/CreditorItem';
+import { CreditorItem } from '@/widgets/CreditorItem';
+
+import { useCreditorDelete } from '../hooks/useCreditorDelete';
+import { useCreditorsFetch } from '../hooks/useCreditorsFetch';
 
 import cls from './CreditorsPage.module.scss';
 
 const CreditorsPage = memo(() => {
-  const [creditors, setCreditors] = useState<CreditorType[] | null>(null);
+  const { creditors, handleFetchCreditors } = useCreditorsFetch();
+
+  const isFetch = useRef(false);
 
   useEffect(() => {
-    fetch(`${__BASE_FAKE_API__}/creditors`)
-      .then((res) => res.json())
-      .then((data) => {
-        setCreditors(data);
-      });
-  }, []);
+    if (isFetch.current) return;
+    isFetch.current = true;
+
+    handleFetchCreditors();
+  }, [handleFetchCreditors]);
+
+  const handleDelete = useCreditorDelete(handleFetchCreditors);
 
   return (
     <section className={classNames(cls.content, ['content'])}>
       {creditors?.map((cr) => (
-        <CreditorItem key={cr.id} creditor={cr} />
+        <CreditorItem key={cr.id} creditor={cr} onDelete={handleDelete(cr.id, cr.name)} />
       ))}
     </section>
   );
