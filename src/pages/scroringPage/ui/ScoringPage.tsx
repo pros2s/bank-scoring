@@ -16,6 +16,7 @@ import { ScoringReducer } from '../model/slice/ScoringSlice';
 import cls from './ScoringPage.module.scss';
 import { ScoringGauge } from './actions/ScoringGauge/ScoringGauge';
 import { ScoringReset } from './actions/ScoringReset/ScoringReset';
+import { ScoringSend } from './actions/ScoringSend/ScoringSend';
 import { ScoringAssets } from './checkboxes/ScoringAssets/ScoringAssets';
 import { ScoringEducation } from './checkboxes/ScoringEducation/ScoringEducation';
 import { ScoringHasCreditHistory } from './checkboxes/ScoringHasCreditHistory/ScoringHasCreditHistory';
@@ -81,6 +82,7 @@ const ScoringPage = memo(() => {
         <FlexBox className={cls.actions} justify='between' gap={50} isWrap>
           <ScoringReset />
           <ScoringGauge />
+          <ScoringSend />
         </FlexBox>
       </section>
     </DynamicReducerLoader>

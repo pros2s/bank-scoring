@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 
 import { getScoringScore } from '../../../model/selectors/scoringSelectors';
 
+import cls from './ScoringGauge.module.scss';
 import { useScore } from './hooks/useScore';
 
 export const ScoringGauge = () => {
@@ -11,6 +12,7 @@ export const ScoringGauge = () => {
 
   return (
     <GaugeComponent
+      className={cls.gauge}
       value={score}
       minValue={300}
       maxValue={850}
@@ -19,36 +21,36 @@ export const ScoringGauge = () => {
         width: 0.4,
         padding: 0.005,
         cornerRadius: 1,
-        colorArray: ['#5BE12C', '#EA4228'],
+        // gradient: true,
         subArcs: [
           {
             limit: 300,
-            color: '#EA4228',
             showTick: true,
+            color: '#ff3232',
           },
           {
             limit: 400,
-            color: '#F5CD19',
             showTick: true,
+            color: '#ff3232',
           },
           {
             limit: 500,
-            color: '#EA4228',
             showTick: true,
+            color: '#fa7630',
           },
 
           {
             limit: 600,
-            color: '#5BE12C',
             showTick: true,
+            color: '#f4b82f',
           },
           {
             limit: 700,
-            color: '#F5CD19',
             showTick: true,
+            color: '#cbee2d',
           },
           {
-            color: '#F5CD19',
+            color: '#5BE12C',
           },
         ],
       }}

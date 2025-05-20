@@ -31,6 +31,7 @@ const initialState: ScoringSchema = {
   childrenCountError: '',
   employmentYearsError: '',
   savingsError: '',
+  requestError: '',
 };
 
 export const ScoringSlice = createSlice({
@@ -131,6 +132,12 @@ export const ScoringSlice = createSlice({
 
     setScore: (state, action: PayloadAction<number>) => {
       state.score = action.payload;
+    },
+    setRequestError: (state, action: PayloadAction<string>) => {
+      state.requestError = action.payload;
+    },
+    setRequestLoading: (state, action: PayloadAction<boolean>) => {
+      state.requestLoading = action.payload;
     },
   },
 });

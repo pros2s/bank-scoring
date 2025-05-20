@@ -19,9 +19,11 @@
   background: none;
   border: 1px solid var(--primary-color);
 
-  &:hover {
-    color: var(--bg-color);
-    background-color: var(--primary-color);
+  &:not(.loading) {
+    &:hover {
+      color: var(--bg-color);
+      background-color: var(--primary-color);
+    }
   }
 }
 

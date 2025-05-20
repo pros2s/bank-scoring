@@ -25,3 +25,6 @@ export const getScoringChildrenCountError = (state: StateSchema) =>
   state.scoring?.childrenCountError;
 export const getScoringEmploymentYearsError = (state: StateSchema) =>
   state.scoring?.employmentYearsError;
+
+export const getScoringRequestError = (state: StateSchema) => state.scoring?.requestError;
+export const getScoringRequestLoading = (state: StateSchema) => state.scoring?.requestLoading;

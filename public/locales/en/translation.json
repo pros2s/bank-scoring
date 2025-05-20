@@ -57,5 +57,7 @@
   "surNameError": "Incorrect surname",
   "nameError": "Incorrect name",
   "resetData": "Reset data",
-  "sendData": "Send data"
+  "sendData": "Send data",
+  "serverError": "Server error",
+  "clientError": "Client error"
 }

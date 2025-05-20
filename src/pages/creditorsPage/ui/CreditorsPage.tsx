@@ -1,6 +1,6 @@
 import { memo, useState, useEffect } from 'react';
 
-const mainApi = 'http://localhost:8000';
+import { __BASE_FAKE_API__ } from '@/shared/api/api';
 
 interface CreditorType {
   id: number;
@@ -19,7 +19,7 @@ const CreditorsPage = memo(() => {
   const [creditors, setCreditors] = useState<CreditorType[] | null>(null);
 
   useEffect(() => {
-    fetch(`${mainApi}/creditors`)
+    fetch(`${__BASE_FAKE_API__}/creditors`)
       .then((res) => res.json())
       .then((data) => {
         setCreditors(data);
