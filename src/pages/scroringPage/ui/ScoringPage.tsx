@@ -3,10 +3,7 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { classNames } from '@/shared/lib/classNames/classNames';
-import {
-  DynamicReducerLoader,
-  ReducersList,
-} from '@/shared/lib/components/DynamicReducerLoader/DynamicReducerLoader';
+import { DynamicReducerLoader, ReducersList } from '@/shared/lib/components/DynamicReducerLoader/DynamicReducerLoader';
 import { FlexBox } from '@/shared/ui/FlexBox';
 import { Label } from '@/shared/ui/Label';
 
@@ -21,6 +18,7 @@ import { ScoringAssets } from './checkboxes/ScoringAssets/ScoringAssets';
 import { ScoringEducation } from './checkboxes/ScoringEducation/ScoringEducation';
 import { ScoringHasCreditHistory } from './checkboxes/ScoringHasCreditHistory/ScoringHasCreditHistory';
 import { ScoringHasCriminalRecord } from './checkboxes/ScoringHasCriminalRecord/ScoringHasCriminalRecord';
+import { ScoringCredit } from './credit/ScoringCredit/ScoringCredit';
 import { ScoringEmploymentYears } from './money/ScoringEmploymentYears/ScoringEmploymentYears';
 import { ScoringIncome } from './money/ScoringIncome/ScoringIncome';
 import { ScoringSavings } from './money/ScoringSavings/ScoringSavings';
@@ -47,6 +45,12 @@ const ScoringPage = memo(() => {
           <h1>{t('bankScoring')}</h1>
 
           <p>{t('fillData')}</p>
+        </FlexBox>
+
+        <FlexBox gap={50} isWrap>
+          <ScoringCredit />
+          {/* <ScoringPercentage />
+          <ScoringYears /> */}
         </FlexBox>
 
         <FlexBox gap={50} isWrap>

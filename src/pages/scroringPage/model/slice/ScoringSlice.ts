@@ -18,7 +18,9 @@ const initialState: ScoringSchema = {
   savings: '',
   assets: [],
   childrenCount: '',
+  creditAmount: '10000',
   score: 400,
+  requestLoading: false,
 
   nameError: '',
   surnameError: '',
@@ -29,6 +31,7 @@ const initialState: ScoringSchema = {
   employmentYearsError: '',
   savingsError: '',
   requestError: '',
+  creditAmountError: '',
 };
 
 export const ScoringSlice = createSlice({
@@ -124,6 +127,15 @@ export const ScoringSlice = createSlice({
     },
     setChildrenCountError: (state, action: PayloadAction<string>) => {
       state.childrenCountError = action.payload;
+    },
+    // --------------------------------------------------------------
+
+    // creditAmount
+    setCreditAmount: (state, action: PayloadAction<string>) => {
+      state.creditAmount = action.payload;
+    },
+    setCreditAmountError: (state, action: PayloadAction<string>) => {
+      state.creditAmountError = action.payload;
     },
     // --------------------------------------------------------------
 

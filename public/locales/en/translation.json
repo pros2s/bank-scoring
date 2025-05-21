@@ -71,5 +71,7 @@
   "searchCreditors": "Name, age or status",
   "Approved": "Approved",
   "Pending": "Pending",
-  "Denied": "Denied"
+  "Denied": "Denied",
+  "credit": "Credit amount",
+  "creditError": "Incorrect credit amount"
 }

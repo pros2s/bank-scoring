@@ -34,6 +34,9 @@ export interface ScoringSchema {
   childrenCount: string;
   childrenCountError?: string;
 
+  creditAmount: string;
+  creditAmountError: string;
+
   score?: number;
   requestError?: string;
   requestLoading?: boolean;

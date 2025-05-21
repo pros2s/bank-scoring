@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import {
   getScoringAgeError,
   getScoringChildrenCountError,
+  getScoringCreditAmountError,
   getScoringEmploymentYearsError,
   getScoringExistingDebtError,
   getScoringIncomeError,
@@ -23,9 +24,11 @@ export const useGetScoringErrorMessage = () => {
   const savingsError = useSelector(getScoringSavingsError) ?? '';
   const scoringChildrenCountError = useSelector(getScoringChildrenCountError) ?? '';
   const scoringEmploymentYearsError = useSelector(getScoringEmploymentYearsError) ?? '';
+  const scoringCreditAmountError = useSelector(getScoringCreditAmountError) ?? '';
 
   return t(
-    nameError ||
+    scoringCreditAmountError ||
+      nameError ||
       surNameError ||
       ageError ||
       incomeError ||

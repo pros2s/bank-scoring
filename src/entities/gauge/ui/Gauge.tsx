@@ -17,12 +17,12 @@ export const Gauge = memo(({ score, tickFontSize = 12, className }: GaugeProps) 
     className={classNames(cls.gauge, [className])}
     value={score}
     minValue={300}
-    maxValue={850}
+    maxValue={950}
     type='radial'
     arc={{
       width: 0.4,
       padding: 0.005,
-      cornerRadius: 1,
+      cornerRadius: 5,
       // gradient: true,
       subArcs: [
         {
@@ -52,6 +52,11 @@ export const Gauge = memo(({ score, tickFontSize = 12, className }: GaugeProps) 
           color: '#cbee2d',
         },
         {
+          limit: 800,
+          showTick: true,
+          color: '#a6ff00',
+        },
+        {
           color: '#5BE12C',
         },
       ],
@@ -77,7 +82,7 @@ export const Gauge = memo(({ score, tickFontSize = 12, className }: GaugeProps) 
           formatTextValue: (value: string) => value,
           style: { fontSize: tickFontSize },
         },
-        ticks: [{ value: 300 }, { value: 400 }, { value: 500 }, { value: 600 }, { value: 700 }],
+        ticks: [{ value: 300 }, { value: 400 }, { value: 500 }, { value: 600 }, { value: 700 }, { value: 800 }],
       },
     }}
   />
