@@ -20,6 +20,7 @@ import { ScoringHasCreditHistory } from './checkboxes/ScoringHasCreditHistory/Sc
 import { ScoringHasCriminalRecord } from './checkboxes/ScoringHasCriminalRecord/ScoringHasCriminalRecord';
 import { ScoringCredit } from './credit/ScoringCredit/ScoringCredit';
 import { ScoringPercentage } from './credit/ScoringPercentage/ScoringPercentage';
+import { ScoringYears } from './credit/ScoringYears/ScoringYears';
 import { ScoringEmploymentYears } from './money/ScoringEmploymentYears/ScoringEmploymentYears';
 import { ScoringIncome } from './money/ScoringIncome/ScoringIncome';
 import { ScoringSavings } from './money/ScoringSavings/ScoringSavings';
@@ -51,7 +52,7 @@ const ScoringPage = memo(() => {
         <FlexBox gap={50} isWrap>
           <ScoringCredit />
           <ScoringPercentage />
-          {/* <ScoringYears /> */}
+          <ScoringYears />
         </FlexBox>
 
         <FlexBox gap={50} isWrap>

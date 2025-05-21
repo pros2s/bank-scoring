@@ -74,5 +74,6 @@
   "Denied": "Denied",
   "credit": "Credit amount",
   "creditError": "Incorrect credit amount",
-  "percentage": "Percentage"
+  "percentage": "Percentage",
+  "creditYears": "Credit years"
 }
