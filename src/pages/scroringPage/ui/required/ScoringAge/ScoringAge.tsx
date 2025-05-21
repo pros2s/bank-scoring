@@ -25,7 +25,7 @@ export const ScoringAge = () => {
 
     const numValue = Number(val);
     const isNumber = !Number.isNaN(numValue);
-    const isLess = numValue < 0;
+    const isLess = numValue < 18;
     const isMore = numValue > 100;
 
     if (!isNumber || isLess || isMore) {
@@ -39,14 +39,7 @@ export const ScoringAge = () => {
     <FlexBox direction='column' gap={5}>
       <Label label={`${t('age')} *`} />
       <div className={classNames(cls.input, ['input'])}>
-        <Input
-          placeholder={t('age')}
-          value={age}
-          onChange={handleChange}
-          type='number'
-          min={0}
-          max={100}
-        />
+        <Input placeholder={t('age')} value={age} onChange={handleChange} type='number' min={0} max={100} />
       </div>
     </FlexBox>
   );

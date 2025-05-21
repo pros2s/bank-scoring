@@ -7,7 +7,7 @@ import { ScoringSchema } from '../types/ScoringSchema';
 const initialState: ScoringSchema = {
   name: '',
   surname: '',
-  age: '',
+  age: '18',
   income: '50000',
   maritalStatus: 'single',
   existingDebt: '',

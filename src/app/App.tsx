@@ -30,6 +30,7 @@ const App = memo(() => {
             </div>
           </div>
         </nav>
+
         <div className='container'>
           <RoutesProvider />
         </div>
