@@ -8,6 +8,7 @@ import {
   getScoringAge,
   getScoringAssets,
   getScoringChildrenCount,
+  getScoringCreditAmount,
   getScoringEducation,
   getScoringEmploymentYears,
   getScoringExistingDebt,
@@ -15,7 +16,9 @@ import {
   getScoringHasCriminalRecord,
   getScoringIncome,
   getScoringMaritalStatus,
+  getScoringPercentage,
   getScoringSavings,
+  getScoringYears,
 } from '../../../../model/selectors/scoringSelectors';
 import { ScoringActions } from '../../../../model/slice/ScoringSlice';
 
@@ -35,6 +38,10 @@ export const useScore = () => {
   const hasCreditHistory = useSelector(getScoringHasCreditHistory);
   const hasCriminalRecord = useSelector(getScoringHasCriminalRecord);
   const maritalStatus = useSelector(getScoringMaritalStatus);
+
+  const creditScore = useSelector(getScoringCreditAmount);
+  const percentage = useSelector(getScoringPercentage);
+  const years = useSelector(getScoringYears);
 
   useEffect(() => {
     let score = 460;
@@ -126,6 +133,16 @@ export const useScore = () => {
     else if (childrenCount === 2) score -= 10;
     else if (childrenCount === 1) score -= 5;
 
+    // credit score
+    const percentCredit = Number(creditScore) * (1 + Number(percentage) / 100);
+    const monthlyPayment = percentCredit / (Number(years) * 12);
+    const incomePercent = Math.floor((monthlyPayment * 100) / income);
+
+    if (incomePercent <= 10) score += 70;
+    else if (incomePercent <= 20) score += 50;
+    else if (incomePercent <= 30) score += 30;
+    else if (incomePercent > 40) score = 300;
+
     // final
     const final = Math.max(300, Math.min(score, 850));
     dispatch(setScore(final));
@@ -142,5 +159,8 @@ export const useScore = () => {
     incomeS,
     maritalStatus,
     savingsS,
+    creditScore,
+    percentage,
+    years,
   ]);
 };
