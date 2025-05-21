@@ -1,4 +1,4 @@
-import { AssetType, EducationLevelType, MaritalStatusType } from '@/shared/lib/types/scoring';
+import { AssetType, EducationLevelType, MaritalStatusType, ScoringPercentageType } from '@/shared/lib/types/scoring';
 
 export interface ScoringSchema {
   name: string;
@@ -36,6 +36,9 @@ export interface ScoringSchema {
 
   creditAmount: string;
   creditAmountError: string;
+
+  percentage?: ScoringPercentageType;
+  percentageError?: string;
 
   score?: number;
   requestError?: string;

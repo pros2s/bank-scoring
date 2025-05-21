@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-import { AssetType, EducationLevelType, MaritalStatusType } from '@/shared/lib/types/scoring';
+import { AssetType, EducationLevelType, MaritalStatusType, ScoringPercentageType } from '@/shared/lib/types/scoring';
 
 import { ScoringSchema } from '../types/ScoringSchema';
 
@@ -21,6 +21,7 @@ const initialState: ScoringSchema = {
   creditAmount: '10000',
   score: 400,
   requestLoading: false,
+  percentage: '12.5',
 
   nameError: '',
   surnameError: '',
@@ -32,6 +33,7 @@ const initialState: ScoringSchema = {
   savingsError: '',
   requestError: '',
   creditAmountError: '',
+  percentageError: '',
 };
 
 export const ScoringSlice = createSlice({
@@ -136,6 +138,15 @@ export const ScoringSlice = createSlice({
     },
     setCreditAmountError: (state, action: PayloadAction<string>) => {
       state.creditAmountError = action.payload;
+    },
+    // --------------------------------------------------------------
+
+    // percentage
+    setPercentage: (state, action: PayloadAction<ScoringPercentageType>) => {
+      state.percentage = action.payload;
+    },
+    setPercentageError: (state, action: PayloadAction<string>) => {
+      state.percentageError = action.payload;
     },
     // --------------------------------------------------------------
 

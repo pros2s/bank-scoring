@@ -73,5 +73,6 @@
   "Pending": "Pending",
   "Denied": "Denied",
   "credit": "Credit amount",
-  "creditError": "Incorrect credit amount"
+  "creditError": "Incorrect credit amount",
+  "percentage": "Percentage"
 }
