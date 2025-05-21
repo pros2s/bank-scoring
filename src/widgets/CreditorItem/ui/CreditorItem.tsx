@@ -1,13 +1,14 @@
 import { useTranslation } from 'react-i18next';
 import { MdDelete } from 'react-icons/md';
 
-import { CreditStatus } from '@/entities/creditSatus';
+import { CreditStatus } from '@/entities/creditStatus';
 import { Gauge } from '@/entities/gauge';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { AssetType, EducationLevelType, MaritalStatusType, ScoreStatusType } from '@/shared/lib/types/scoring';
 import { Button, ButtonThemes } from '@/shared/ui/Button/Button';
 import { FlexBox } from '@/shared/ui/FlexBox';
 
+import { getCreditorCredit } from '../helpers/getCreditorCredit';
 import { useGetDate } from '../hooks/useGetDate';
 
 import cls from './CreditorItem.module.scss';
@@ -29,6 +30,9 @@ export interface CreditorType {
   childrenCount: string;
   score: number;
   status: ScoreStatusType;
+  creditScore: string;
+  percentage: string;
+  years: string;
 }
 
 interface CreditorItemProps {
@@ -58,10 +62,13 @@ export const CreditorItem = ({ creditor, className, onDelete }: CreditorItemProp
     savings,
     score,
     status,
+    creditScore,
+    percentage,
+    years,
   } = creditor;
 
   return (
-    <FlexBox className={classNames(cls.item, [className])} direction='column' gap={20}>
+    <FlexBox className={classNames(cls.item, [className])} direction='column' gap={10}>
       <FlexBox className='w-100' align='center' justify='between' gap={20}>
         <FlexBox align='center' gap={15}>
           <h3>{name}</h3>
@@ -71,6 +78,27 @@ export const CreditorItem = ({ creditor, className, onDelete }: CreditorItemProp
         <Button theme={ButtonThemes.CLEAR} onClick={onDelete}>
           <MdDelete className='size-20' />
         </Button>
+      </FlexBox>
+
+      <FlexBox className={cls.credit} align='center' gap={10}>
+        <FlexBox align='center' gap={5}>
+          <p className={cls.label}>{t('credit')}:</p>
+          <p className={cls.info}>{`${getCreditorCredit(creditScore)}₽`}</p>
+        </FlexBox>
+
+        <span className={cls.dot} />
+
+        <FlexBox align='center' gap={5}>
+          <p className={cls.label}>{t('percentage')}:</p>
+          <p className={cls.info}>{`${percentage}%`}</p>
+        </FlexBox>
+
+        <span className={cls.dot} />
+
+        <FlexBox align='center' gap={5}>
+          <p className={cls.label}>{t('creditYears')}:</p>
+          <p className={cls.info}>{years}</p>
+        </FlexBox>
       </FlexBox>
 
       <FlexBox className='w-100' align='center' justify='between' gap={20} isWrap>

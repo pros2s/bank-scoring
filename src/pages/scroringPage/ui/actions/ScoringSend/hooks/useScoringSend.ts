@@ -10,6 +10,7 @@ import {
   getScoringAge,
   getScoringAssets,
   getScoringChildrenCount,
+  getScoringCreditAmount,
   getScoringEducation,
   getScoringEmploymentYears,
   getScoringExistingDebt,
@@ -18,10 +19,12 @@ import {
   getScoringIncome,
   getScoringMaritalStatus,
   getScoringName,
+  getScoringPercentage,
   getScoringRequestLoading,
   getScoringSavings,
   getScoringScore,
   getScoringSurname,
+  getScoringYears,
 } from '../../../../model/selectors/scoringSelectors';
 import { ScoringActions } from '../../../../model/slice/ScoringSlice';
 import { useScoringReset } from '../../ScoringReset/hooks/useScoringReset';
@@ -46,6 +49,10 @@ export const useScoringSend = () => {
   const hasCreditHistory = useSelector(getScoringHasCreditHistory);
   const hasCriminalRecord = useSelector(getScoringHasCriminalRecord);
   const maritalStatus = useSelector(getScoringMaritalStatus);
+
+  const creditScore = useSelector(getScoringCreditAmount);
+  const percentage = useSelector(getScoringPercentage);
+  const years = useSelector(getScoringYears);
 
   const score = useSelector(getScoringScore) ?? 300;
 
@@ -72,6 +79,9 @@ export const useScoringSend = () => {
         assets,
         childrenCount: childrenCountS,
         score,
+        creditScore,
+        percentage,
+        years,
         status: getScoreStatus(score),
       }),
       headers: {
