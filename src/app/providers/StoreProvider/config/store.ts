@@ -1,6 +1,7 @@
 import { CombinedState, configureStore, Reducer, ReducersMapObject } from '@reduxjs/toolkit';
 import { NavigateOptions, To } from 'react-router-dom';
 
+import { AppReducer } from '@/app/model/slice/AppSlice';
 import { SymbolsReducer } from '@/features/choseCurrency';
 import { $api } from '@/shared/api/api';
 import { ResentRatesReducer } from '@/widgets/RecentRates';
@@ -17,6 +18,7 @@ export function createReduxStore(
     ...asyncReducers,
     symbols: SymbolsReducer,
     recentRates: ResentRatesReducer,
+    app: AppReducer,
   };
 
   const reducerManager = createReducerManager(rootReducer);

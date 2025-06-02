@@ -1,13 +1,8 @@
-import {
-  AnyAction,
-  CombinedState,
-  EnhancedStore,
-  Reducer,
-  ReducersMapObject,
-} from '@reduxjs/toolkit';
+import { AnyAction, CombinedState, EnhancedStore, Reducer, ReducersMapObject } from '@reduxjs/toolkit';
 import { AxiosInstance } from 'axios';
 import { NavigateOptions, To } from 'react-router-dom';
 
+import { AppSliceSchema } from '@/app/model/types/AppSliceSchema';
 import { SearchCurrencySchema } from '@/entities/searchCurrency';
 import { ChoseCurrencySchema, SymbolsSchema } from '@/features/choseCurrency';
 import { ScoringSchema } from '@/pages/scroringPage';
@@ -15,6 +10,7 @@ import { CurrencyConverterSchema } from '@/widgets/CurrencyConverter';
 import { ResentRatesSchema } from '@/widgets/RecentRates';
 
 export interface StateSchema {
+  app: AppSliceSchema;
   recentRates: ResentRatesSchema;
   symbols: SymbolsSchema;
 
