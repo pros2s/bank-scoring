@@ -80,5 +80,6 @@
   "signUp": "Sign up",
   "yourLogin": "Your login",
   "yourPassword": "Your password",
-  "loginError": "Incorrect login or password"
+  "loginError": "Incorrect login or password",
+  "signOut": "Sign out"
 }
