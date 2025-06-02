@@ -5,7 +5,8 @@ import { NavigateOptions, To } from 'react-router-dom';
 import { AppSliceSchema } from '@/app/model/types/AppSliceSchema';
 import { SearchCurrencySchema } from '@/entities/searchCurrency';
 import { ChoseCurrencySchema, SymbolsSchema } from '@/features/choseCurrency';
-import { ScoringSchema } from '@/pages/scroringPage';
+import { LoginPageSchema } from '@/pages/loginPage';
+import { ScoringSchema } from '@/pages/scoringPage';
 import { CurrencyConverterSchema } from '@/widgets/CurrencyConverter';
 import { ResentRatesSchema } from '@/widgets/RecentRates';
 
@@ -24,6 +25,8 @@ export interface StateSchema {
   choseFromCurrency?: ChoseCurrencySchema;
   choseBaseCurrency?: ChoseCurrencySchema;
   choseToCurrency?: ChoseCurrencySchema;
+
+  loginPage?: LoginPageSchema;
 
   scoring?: ScoringSchema;
 }

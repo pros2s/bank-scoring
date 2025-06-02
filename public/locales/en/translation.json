@@ -77,5 +77,8 @@
   "percentage": "Percentage",
   "creditYears": "Credit years",
   "login": "Login",
-  "signUp": "Sign up"
+  "signUp": "Sign up",
+  "yourLogin": "Your login",
+  "yourPassword": "Your password",
+  "loginError": "Incorrect login or password"
 }

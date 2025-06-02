@@ -10,7 +10,6 @@ import { CreditorsLink } from '@/entities/links/creditorsLink';
 import { LoginLink } from '@/entities/links/loginLink';
 import { RatesLink } from '@/entities/links/ratesLink';
 import { ScoringLink } from '@/entities/links/scoringLink';
-import { SignUpLink } from '@/entities/links/signUpLink';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { LangSwitcher } from '@/widgets/LangSwitcher';
 import { ThemeSwitcher } from '@/widgets/ThemeSwitcher';
@@ -26,12 +25,7 @@ const App = memo(() => {
         <nav className='navbar'>
           <div className='navbar-inner'>
             <div className='navbar-links'>
-              {!isAuth && (
-                <>
-                  <LoginLink />
-                  <SignUpLink />
-                </>
-              )}
+              {!isAuth && <LoginLink />}
 
               {isAuth && (
                 <>

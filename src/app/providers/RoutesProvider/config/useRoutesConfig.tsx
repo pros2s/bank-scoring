@@ -7,8 +7,7 @@ import { CreditorsPage } from '@/pages/creditorsPage';
 import { LoginPage } from '@/pages/loginPage';
 import { NotFoundPage } from '@/pages/notFoundPage';
 import { RatesPage } from '@/pages/ratesPage';
-import { ScoringPage } from '@/pages/scroringPage';
-import { SignUpPage } from '@/pages/signUpPage';
+import { ScoringPage } from '@/pages/scoringPage';
 import { AppRoutes, RoutesPaths } from '@/shared/lib/routes/routes';
 
 type RoutesConfig = RouteProps & {
@@ -22,12 +21,7 @@ export const useRoutesConfig = (): Record<AppRoutes, RoutesConfig> => {
     [AppRoutes.LOGIN]: {
       path: RoutesPaths.login,
       element: <LoginPage />,
-      noRender: false,
-    },
-    [AppRoutes.SIGNUP]: {
-      path: RoutesPaths.signup,
-      element: <SignUpPage />,
-      noRender: false,
+      noRender: !!isAuth,
     },
 
     [AppRoutes.SCORING]: {
