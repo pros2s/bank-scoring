@@ -75,5 +75,7 @@
   "credit": "Credit amount",
   "creditError": "Incorrect credit amount",
   "percentage": "Percentage",
-  "creditYears": "Credit years"
+  "creditYears": "Credit years",
+  "login": "Login",
+  "signUp": "Sign up"
 }

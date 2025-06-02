@@ -53,16 +53,7 @@ export default [
           'newlines-between': 'always',
           pathGroupsExcludedImportTypes: ['react'],
 
-          groups: [
-            'builtin',
-            'external',
-            'internal',
-            'parent',
-            'index',
-            'sibling',
-            'object',
-            'type',
-          ],
+          groups: ['builtin', 'external', 'internal', 'parent', 'index', 'sibling', 'object', 'type'],
 
           pathGroups: [
             {
@@ -147,6 +138,12 @@ export default [
         {
           alias: '@',
           testFilesPatterns: ['**/*.stories.*'],
+          deepFilePathOptions: [
+            {
+              path: 'entities/links',
+              deep: 3,
+            },
+          ],
         },
       ],
 
