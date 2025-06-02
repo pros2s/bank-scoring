@@ -1,8 +1,6 @@
 import { memo, Suspense } from 'react';
 
-import { useSelector } from 'react-redux';
-
-import { getIsAuth } from '@/app/model/selectors/getAppSelectors';
+import { useAuth } from '@/app/providers/AuthProvider';
 import { RoutesProvider } from '@/app/providers/RoutesProvider';
 import { useThemes } from '@/app/providers/ThemesProvider';
 import { ConverterLink } from '@/entities/links/converterLink';
@@ -10,14 +8,15 @@ import { CreditorsLink } from '@/entities/links/creditorsLink';
 import { LoginLink } from '@/entities/links/loginLink';
 import { RatesLink } from '@/entities/links/ratesLink';
 import { ScoringLink } from '@/entities/links/scoringLink';
+import { SignOut } from '@/entities/signOut';
 import { classNames } from '@/shared/lib/classNames/classNames';
+import { FlexBox } from '@/shared/ui/FlexBox';
 import { LangSwitcher } from '@/widgets/LangSwitcher';
 import { ThemeSwitcher } from '@/widgets/ThemeSwitcher';
 
 const App = memo(() => {
   const { theme } = useThemes();
-
-  const isAuth = useSelector(getIsAuth);
+  const { isAuth } = useAuth();
 
   return (
     <div className={classNames('app', [theme])}>
@@ -25,21 +24,22 @@ const App = memo(() => {
         <nav className='navbar'>
           <div className='navbar-inner'>
             <div className='navbar-links'>
-              {!isAuth && <LoginLink />}
+              <ScoringLink />
 
               {isAuth && (
                 <>
-                  <ScoringLink />
                   <CreditorsLink />
                   <ConverterLink />
                   <RatesLink />
                 </>
               )}
             </div>
-            <div>
+            <FlexBox align='center' gap={10}>
               <LangSwitcher />
               <ThemeSwitcher />
-            </div>
+              {isAuth && <SignOut />}
+              {!isAuth && <LoginLink />}
+            </FlexBox>
           </div>
         </nav>
 

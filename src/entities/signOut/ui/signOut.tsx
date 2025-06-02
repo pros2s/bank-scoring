@@ -3,24 +3,18 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 
-import { AppActions } from '@/app/model/slice/AppSlice';
-import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
+import { useAuth } from '@/app/providers/AuthProvider';
 import { Button, ButtonThemes } from '@/shared/ui/Button/Button';
-
-const { setIsAuth } = AppActions;
 
 export const SignOut = memo(() => {
   const { t } = useTranslation();
 
-  const dispatch = useAppDispatch();
   const navigate = useNavigate();
+  const { changeAuth } = useAuth();
 
   const handleSignOut = () => {
-    dispatch(setIsAuth(false));
-
-    setTimeout(() => {
-      navigate('/login', { replace: true });
-    }, 100);
+    changeAuth(false);
+    navigate('/login', { replace: true });
   };
 
   return (

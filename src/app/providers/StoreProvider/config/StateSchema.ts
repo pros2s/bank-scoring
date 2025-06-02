@@ -2,7 +2,6 @@ import { AnyAction, CombinedState, EnhancedStore, Reducer, ReducersMapObject } f
 import { AxiosInstance } from 'axios';
 import { NavigateOptions, To } from 'react-router-dom';
 
-import { AppSliceSchema } from '@/app/model/types/AppSliceSchema';
 import { SearchCurrencySchema } from '@/entities/searchCurrency';
 import { ChoseCurrencySchema, SymbolsSchema } from '@/features/choseCurrency';
 import { LoginPageSchema } from '@/pages/loginPage';
@@ -11,7 +10,6 @@ import { CurrencyConverterSchema } from '@/widgets/CurrencyConverter';
 import { ResentRatesSchema } from '@/widgets/RecentRates';
 
 export interface StateSchema {
-  app: AppSliceSchema;
   recentRates: ResentRatesSchema;
   symbols: SymbolsSchema;
 
